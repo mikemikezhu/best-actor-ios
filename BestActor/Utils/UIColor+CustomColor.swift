@@ -21,6 +21,10 @@ extension UIColor {
 		return UIColor.white
 	}
 
+	class var customSubtitleColor: UIColor {
+		return UIColor.white
+	}
+
 	class var customButtonColor: UIColor {
 		return UIColor.white
 	}

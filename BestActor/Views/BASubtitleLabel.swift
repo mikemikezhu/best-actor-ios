@@ -22,6 +22,6 @@ class BASubtitleLabel: UILabel {
 
 	private func commonInit() {
 		font = UIFont.customSubtitleFont
-		textColor = UIColor.customTitleColor
+		textColor = UIColor.customSubtitleColor
 	}
 }
