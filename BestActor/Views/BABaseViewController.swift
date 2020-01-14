@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  BABaseViewController.swift
 //  BestActor
 //
 //  Created by Mike's Macbook on 1/14/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BABaseViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
