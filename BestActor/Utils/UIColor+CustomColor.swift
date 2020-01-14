@@ -29,6 +29,10 @@ extension UIColor {
 		return UIColor.white
 	}
 
+	class var customTextColor: UIColor {
+		return UIColor.white
+	}
+
 	class var customPhotoFrameBorderColor: UIColor {
 		return UIColor.white
 	}

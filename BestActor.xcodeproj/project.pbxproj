@@ -17,6 +17,7 @@
 		27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5423CD9C5D002D0EA3 /* BAButton.swift */; };
 		27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5623CDA28B002D0EA3 /* BASubtitleLabel.swift */; };
 		27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5823CDA420002D0EA3 /* BAPhotoFrameImageView.swift */; };
+		27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */; };
 		27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60523CCC39500D9E314 /* AppDelegate.swift */; };
 		27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60723CCC39500D9E314 /* SceneDelegate.swift */; };
 		27B1B60A23CCC39500D9E314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60923CCC39500D9E314 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		27A17F5423CD9C5D002D0EA3 /* BAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAButton.swift; sourceTree = "<group>"; };
 		27A17F5623CDA28B002D0EA3 /* BASubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASubtitleLabel.swift; sourceTree = "<group>"; };
 		27A17F5823CDA420002D0EA3 /* BAPhotoFrameImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAPhotoFrameImageView.swift; sourceTree = "<group>"; };
+		27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATextLabel.swift; sourceTree = "<group>"; };
 		27B1B60223CCC39500D9E314 /* BestActor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestActor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B1B60523CCC39500D9E314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B1B60723CCC39500D9E314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				27A17F5423CD9C5D002D0EA3 /* BAButton.swift */,
 				27A17F5623CDA28B002D0EA3 /* BASubtitleLabel.swift */,
 				27A17F5823CDA420002D0EA3 /* BAPhotoFrameImageView.swift */,
+				27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
 				2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */,
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
+				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
