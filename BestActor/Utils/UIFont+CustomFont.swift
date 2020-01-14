@@ -1,5 +1,5 @@
 //
-//  UIFont_CustomFont.swift
+//  UIFont+CustomFont.swift
 //  BestActor
 //
 //  Created by Mike's Macbook on 1/14/20.
@@ -12,6 +12,17 @@ extension UIFont {
 
 	class var customTitleFont: UIFont {
 		guard let customFont = UIFont.init(name: "HoboStd", size: 50) else {
+			fatalError("""
+				Failed to load the "HoboStd" font.
+				Make sure the font file is included in the project and the font name is spelled correctly.
+				"""
+			)
+		}
+		return customFont
+	}
+
+	class var customSubtitleFont: UIFont {
+		guard let customFont = UIFont.init(name: "HoboStd", size: 30) else {
 			fatalError("""
 				Failed to load the "HoboStd" font.
 				Make sure the font file is included in the project and the font name is spelled correctly.
