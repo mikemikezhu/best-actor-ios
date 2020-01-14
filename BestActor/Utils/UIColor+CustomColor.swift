@@ -28,4 +28,12 @@ extension UIColor {
 	class var customButtonColor: UIColor {
 		return UIColor.white
 	}
+
+	class var customPhotoFrameBorderColor: UIColor {
+		return UIColor.white
+	}
+
+	class var customPhotoFrameShadowColor: UIColor {
+		return UIColor.black
+	}
 }
