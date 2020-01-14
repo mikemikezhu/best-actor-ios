@@ -16,4 +16,8 @@ extension UIColor {
 							blue: 235.0/255.0,
 							alpha: 1.0)
 	}
+
+	class var customTitleColor: UIColor {
+		return UIColor.white
+	}
 }
