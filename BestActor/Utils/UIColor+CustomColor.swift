@@ -20,4 +20,8 @@ extension UIColor {
 	class var customTitleColor: UIColor {
 		return UIColor.white
 	}
+
+	class var customButtonColor: UIColor {
+		return UIColor.white
+	}
 }
