@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-No-Zez">
-                                <rect key="frame" x="0.0" y="20" width="414" height="856"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
                                     <segue destination="qJ6-3p-2W0" kind="embed" id="AKt-Pl-mNV"/>
                                 </connections>
@@ -36,12 +36,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="t6Y-No-Zez" firstAttribute="trailing" secondItem="mdc-6W-nhi" secondAttribute="trailing" id="ANw-im-BCG"/>
                             <constraint firstItem="AMx-iN-f4e" firstAttribute="centerX" secondItem="R8R-bZ-26K" secondAttribute="centerX" id="HeQ-1j-T60"/>
-                            <constraint firstItem="t6Y-No-Zez" firstAttribute="leading" secondItem="mdc-6W-nhi" secondAttribute="leading" id="KMm-55-By4"/>
+                            <constraint firstItem="t6Y-No-Zez" firstAttribute="leading" secondItem="mdc-6W-nhi" secondAttribute="leading" id="MFr-8P-lCo"/>
+                            <constraint firstAttribute="bottom" secondItem="t6Y-No-Zez" secondAttribute="bottom" id="N9c-H9-pWk"/>
                             <constraint firstItem="mdc-6W-nhi" firstAttribute="bottom" secondItem="AMx-iN-f4e" secondAttribute="bottom" constant="25" id="Skj-ie-gSK"/>
-                            <constraint firstItem="t6Y-No-Zez" firstAttribute="top" secondItem="R8R-bZ-26K" secondAttribute="top" constant="20" symbolic="YES" id="iUt-Y4-ejF"/>
-                            <constraint firstAttribute="bottom" secondItem="t6Y-No-Zez" secondAttribute="bottom" constant="20" symbolic="YES" id="ynu-v3-U09"/>
+                            <constraint firstItem="t6Y-No-Zez" firstAttribute="trailing" secondItem="mdc-6W-nhi" secondAttribute="trailing" id="fwZ-WS-tts"/>
+                            <constraint firstItem="t6Y-No-Zez" firstAttribute="top" secondItem="R8R-bZ-26K" secondAttribute="top" id="xva-Za-dsR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdc-6W-nhi"/>
                     </view>
