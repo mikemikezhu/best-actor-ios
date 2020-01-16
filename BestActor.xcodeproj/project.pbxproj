@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2704B2F323D0BA54002340CB /* BATutorialPageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
 		2786805723CD921E00DBDEB8 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805423CD921E00DBDEB8 /* OpenSans-CondLight.ttf */; };
 		2786805823CD921E00DBDEB8 /* HoboStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805523CD921E00DBDEB8 /* HoboStd.otf */; };
+		278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278997C523D0AB0B00A5E62B /* BATutorialPageViewController.swift */; };
+		278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278997C823D0B4E800A5E62B /* BATutorialContainerViewController.swift */; };
 		27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */; };
 		27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5223CD99E7002D0EA3 /* BATitleLabel.swift */; };
 		27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5423CD9C5D002D0EA3 /* BAButton.swift */; };
@@ -28,11 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATutorialPageDelegate.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
 		2786805423CD921E00DBDEB8 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
 		2786805523CD921E00DBDEB8 /* HoboStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HoboStd.otf; sourceTree = "<group>"; };
+		278997C523D0AB0B00A5E62B /* BATutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATutorialPageViewController.swift; sourceTree = "<group>"; };
+		278997C823D0B4E800A5E62B /* BATutorialContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATutorialContainerViewController.swift; sourceTree = "<group>"; };
 		27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
 		27A17F5223CD99E7002D0EA3 /* BATitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATitleLabel.swift; sourceTree = "<group>"; };
 		27A17F5423CD9C5D002D0EA3 /* BAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAButton.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				27A17F5A23CDB4AD002D0EA3 /* BaseViews */,
+				278997C723D0B4C000A5E62B /* Tutorial */,
 				27B1B60923CCC39500D9E314 /* ViewController.swift */,
 				27B1B60B23CCC39500D9E314 /* Main.storyboard */,
 				27B1B61323CCC39B00D9E314 /* LaunchScreen.storyboard */,
@@ -98,6 +105,16 @@
 				2786805423CD921E00DBDEB8 /* OpenSans-CondLight.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		278997C723D0B4C000A5E62B /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				278997C523D0AB0B00A5E62B /* BATutorialPageViewController.swift */,
+				278997C823D0B4E800A5E62B /* BATutorialContainerViewController.swift */,
+				2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		27A17F5A23CDB4AD002D0EA3 /* BaseViews */ = {
@@ -218,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
+				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
 				27B1B60A23CCC39500D9E314 /* ViewController.swift in Sources */,
 				27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */,
@@ -225,9 +243,11 @@
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
 				2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */,
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
+				278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */,
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
+				2704B2F323D0BA54002340CB /* BATutorialPageDelegate.swift in Sources */,
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
