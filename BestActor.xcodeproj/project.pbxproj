@@ -23,7 +23,6 @@
 		27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */; };
 		27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60523CCC39500D9E314 /* AppDelegate.swift */; };
 		27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60723CCC39500D9E314 /* SceneDelegate.swift */; };
-		27B1B60A23CCC39500D9E314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60923CCC39500D9E314 /* ViewController.swift */; };
 		27B1B60D23CCC39500D9E314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B1B60B23CCC39500D9E314 /* Main.storyboard */; };
 		27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60E23CCC39500D9E314 /* BestActor.xcdatamodeld */; };
 		27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B1B61123CCC39B00D9E314 /* Assets.xcassets */; };
@@ -48,7 +47,6 @@
 		27B1B60223CCC39500D9E314 /* BestActor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestActor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B1B60523CCC39500D9E314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B1B60723CCC39500D9E314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27B1B60923CCC39500D9E314 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27B1B60C23CCC39500D9E314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27B1B60F23CCC39500D9E314 /* BestActor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BestActor.xcdatamodel; sourceTree = "<group>"; };
 		27B1B61123CCC39B00D9E314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 			children = (
 				27A17F5A23CDB4AD002D0EA3 /* BaseViews */,
 				278997C723D0B4C000A5E62B /* Tutorial */,
-				27B1B60923CCC39500D9E314 /* ViewController.swift */,
 				27B1B60B23CCC39500D9E314 /* Main.storyboard */,
 				27B1B61323CCC39B00D9E314 /* LaunchScreen.storyboard */,
 			);
@@ -237,7 +234,6 @@
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
-				27B1B60A23CCC39500D9E314 /* ViewController.swift in Sources */,
 				27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */,
 				27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */,
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
