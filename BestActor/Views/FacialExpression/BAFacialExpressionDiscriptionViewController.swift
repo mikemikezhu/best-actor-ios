@@ -24,7 +24,7 @@ class BAFacialExpressionDiscriptionViewController: BABaseViewController {
 		if let facialExpressionService = service as? BAFacialExpressionService {
 
 			if let facialExpression = facialExpressionService.loadFacialExpression() {
-				print("[INFO] - Load facial expression: \(facialExpression)")
+				BALogger.info("Load facial expression: \(facialExpression)")
 				configureFacialExpressionLabel(facialExpression)
 				configureFacialExpressionImageView(facialExpression)
 			}

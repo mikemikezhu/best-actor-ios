@@ -14,6 +14,7 @@
 		2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2704B2FD23D16CE1002340CB /* FacialExpression.plist */; };
 		2704B30023D17811002340CB /* BAServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FF23D17811002340CB /* BAServiceManager.swift */; };
 		2704B30323D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30223D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift */; };
+		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -43,6 +44,7 @@
 		2704B2FD23D16CE1002340CB /* FacialExpression.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FacialExpression.plist; sourceTree = "<group>"; };
 		2704B2FF23D17811002340CB /* BAServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAServiceManager.swift; sourceTree = "<group>"; };
 		2704B30223D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionDiscriptionViewController.swift; sourceTree = "<group>"; };
+		2704B30423D18CB8002340CB /* BALogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BALogger.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */,
 				27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */,
+				2704B30423D18CB8002340CB /* BALogger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
+				2704B30523D18CB8002340CB /* BALogger.swift in Sources */,
 				27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */,
 				27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */,
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,

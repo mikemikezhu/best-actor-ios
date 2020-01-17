@@ -35,12 +35,12 @@ class BAFacialExpressionService: NSObject {
 		if let path = Bundle.main.path(forResource: "FacialExpression", ofType: "plist") {
 
 			if let facialExpressions = NSArray(contentsOfFile: path) as? [String] {
-				print("[INFO] - Successfully loaded facial expressions: \(String(describing: facialExpressions))")
+				BALogger.info("Successfully loaded facial expressions: \(String(describing: facialExpressions))")
 				return facialExpressions
 			}
 		}
 
-		print("[WARN] - Failed to load facial expressions")
+		BALogger.warn("Failed to load facial expressions")
 		return nil
 	}
 }

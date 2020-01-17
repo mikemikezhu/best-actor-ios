@@ -16,7 +16,7 @@ class BAServiceManager {
 
 	func initServices() {
 
-		print("[INFO] - Init services")
+		BALogger.info("Init services")
 
 		let facialExpressionService = BAFacialExpressionService()
 		BACoreServiceFactory.sharedFactory.registerService(facialExpressionService)
