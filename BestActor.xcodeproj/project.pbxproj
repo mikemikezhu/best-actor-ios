@@ -13,6 +13,7 @@
 		2704B2FC23D16B6B002340CB /* BAFacialExpressionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */; };
 		2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2704B2FD23D16CE1002340CB /* FacialExpression.plist */; };
 		2704B30023D17811002340CB /* BAServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FF23D17811002340CB /* BAServiceManager.swift */; };
+		2704B30323D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30223D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -41,6 +42,7 @@
 		2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionService.swift; sourceTree = "<group>"; };
 		2704B2FD23D16CE1002340CB /* FacialExpression.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FacialExpression.plist; sourceTree = "<group>"; };
 		2704B2FF23D17811002340CB /* BAServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAServiceManager.swift; sourceTree = "<group>"; };
+		2704B30223D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionDiscriptionViewController.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		2704B30123D17FF0002340CB /* FacialExpression */ = {
+			isa = PBXGroup;
+			children = (
+				2704B30223D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift */,
+			);
+			path = FacialExpression;
+			sourceTree = "<group>";
+		};
 		2786804B23CCCB4D00DBDEB8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 			children = (
 				27A17F5A23CDB4AD002D0EA3 /* BaseViews */,
 				278997C723D0B4C000A5E62B /* Tutorial */,
+				2704B30123D17FF0002340CB /* FacialExpression */,
 				27B1B60B23CCC39500D9E314 /* Main.storyboard */,
 				27B1B61323CCC39B00D9E314 /* LaunchScreen.storyboard */,
 			);
@@ -266,6 +277,7 @@
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
 				278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */,
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
+				2704B30323D18287002340CB /* BAFacialExpressionDiscriptionViewController.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
 				2704B2FC23D16B6B002340CB /* BAFacialExpressionService.swift in Sources */,

@@ -171,6 +171,66 @@
             </objects>
             <point key="canvasLocation" x="-2330.434782608696" y="809.59821428571422"/>
         </scene>
+        <!--Facial Expression Discription View Controller-->
+        <scene sceneID="aKd-uw-6R9">
+            <objects>
+                <viewController id="dKy-lH-NAu" customClass="BAFacialExpressionDiscriptionViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbI-HV-HgW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S MIMIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78t-ne-Afx" customClass="BASubtitleLabel" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-TM-5cG" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="145" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PC0-bO-rdG">
+                                <rect key="frame" x="79.5" y="337.5" width="255" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="idE-SP-T6I"/>
+                                    <constraint firstAttribute="width" constant="255" id="o4s-kI-YsS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0N-uC-56i" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="163" y="708.5" width="88" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="Tdp-7Q-Bh9"/>
+                                    <constraint firstAttribute="height" constant="36" id="uzb-ZN-hGZ"/>
+                                </constraints>
+                                <state key="normal" title="READY GO!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="78t-ne-Afx" firstAttribute="leading" secondItem="LsH-Ps-teK" secondAttribute="leading" constant="20" id="2C9-uz-VJL"/>
+                            <constraint firstItem="R0N-uC-56i" firstAttribute="centerX" secondItem="bbI-HV-HgW" secondAttribute="centerX" id="2nK-kM-ThJ"/>
+                            <constraint firstItem="PC0-bO-rdG" firstAttribute="centerX" secondItem="bbI-HV-HgW" secondAttribute="centerX" id="8yH-Hq-S6f"/>
+                            <constraint firstItem="gyc-TM-5cG" firstAttribute="leading" secondItem="LsH-Ps-teK" secondAttribute="leading" constant="20" id="9kR-mP-Taw"/>
+                            <constraint firstItem="LsH-Ps-teK" firstAttribute="trailing" secondItem="78t-ne-Afx" secondAttribute="trailing" constant="20" id="AmF-ZO-I0y"/>
+                            <constraint firstItem="gyc-TM-5cG" firstAttribute="top" secondItem="78t-ne-Afx" secondAttribute="bottom" constant="20" id="R9H-TS-N9A"/>
+                            <constraint firstItem="R0N-uC-56i" firstAttribute="top" secondItem="PC0-bO-rdG" secondAttribute="bottom" constant="50" id="h3D-lc-FmU"/>
+                            <constraint firstItem="PC0-bO-rdG" firstAttribute="centerY" secondItem="bbI-HV-HgW" secondAttribute="centerY" constant="50" id="pEx-XW-t9q"/>
+                            <constraint firstItem="78t-ne-Afx" firstAttribute="top" secondItem="LsH-Ps-teK" secondAttribute="top" constant="60" id="ptA-Oy-WM7"/>
+                            <constraint firstItem="LsH-Ps-teK" firstAttribute="trailing" secondItem="gyc-TM-5cG" secondAttribute="trailing" constant="20" id="yGa-vu-7XV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LsH-Ps-teK"/>
+                    </view>
+                    <connections>
+                        <outlet property="facialExpressionImageView" destination="PC0-bO-rdG" id="LNS-ab-DDx"/>
+                        <outlet property="facialExpressionLabel" destination="gyc-TM-5cG" id="YMs-2W-cse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQM-qy-oaD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262.3188405797102" y="809.59821428571422"/>
+        </scene>
         <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -204,6 +264,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="dh0-Kn-DsN"/>
                                 </constraints>
                                 <state key="normal" title="START PLAYING"/>
+                                <connections>
+                                    <segue destination="dKy-lH-NAu" kind="presentation" modalPresentationStyle="fullScreen" id="nPX-0s-e27"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
