@@ -10,6 +10,9 @@
 		2704B2F323D0BA54002340CB /* BATutorialPageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */; };
 		2704B2F823D0C8CD002340CB /* BACoreServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */; };
 		2704B2FA23D166FB002340CB /* BAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2F923D166FB002340CB /* BAService.swift */; };
+		2704B2FC23D16B6B002340CB /* BAFacialExpressionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */; };
+		2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2704B2FD23D16CE1002340CB /* FacialExpression.plist */; };
+		2704B30023D17811002340CB /* BAServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FF23D17811002340CB /* BAServiceManager.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -35,6 +38,9 @@
 		2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATutorialPageDelegate.swift; sourceTree = "<group>"; };
 		2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACoreServiceFactory.swift; sourceTree = "<group>"; };
 		2704B2F923D166FB002340CB /* BAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAService.swift; sourceTree = "<group>"; };
+		2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionService.swift; sourceTree = "<group>"; };
+		2704B2FD23D16CE1002340CB /* FacialExpression.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FacialExpression.plist; sourceTree = "<group>"; };
+		2704B2FF23D17811002340CB /* BAServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAServiceManager.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -73,7 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				2704B2F923D166FB002340CB /* BAService.swift */,
+				2704B2FF23D17811002340CB /* BAServiceManager.swift */,
 				2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */,
+				2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 				2786805223CD920A00DBDEB8 /* Fonts */,
 				27B1B61123CCC39B00D9E314 /* Assets.xcassets */,
 				27B1B61623CCC39B00D9E314 /* Info.plist */,
+				2704B2FD23D16CE1002340CB /* FacialExpression.plist */,
 				27B1B60E23CCC39500D9E314 /* BestActor.xcdatamodeld */,
 			);
 			path = BestActor;
@@ -229,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */,
 				27B1B61523CCC39B00D9E314 /* LaunchScreen.storyboard in Resources */,
 				27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */,
 				2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */,
@@ -245,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2704B30023D17811002340CB /* BAServiceManager.swift in Sources */,
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
@@ -257,6 +268,7 @@
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
+				2704B2FC23D16B6B002340CB /* BAFacialExpressionService.swift in Sources */,
 				2704B2F323D0BA54002340CB /* BATutorialPageDelegate.swift in Sources */,
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
 				2704B2FA23D166FB002340CB /* BAService.swift in Sources */,
