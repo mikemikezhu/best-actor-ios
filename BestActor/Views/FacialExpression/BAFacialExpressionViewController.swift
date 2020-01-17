@@ -1,5 +1,5 @@
 //
-//  BAFacialExpressionDiscriptionViewController.swift
+//  BAFacialExpressionViewController.swift
 //  BestActor
 //
 //  Created by Mike's Macbook on 1/17/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BAFacialExpressionDiscriptionViewController: BABaseViewController {
+class BAFacialExpressionViewController: BABaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var facialExpressionLabel: BATitleLabel!
 	@IBOutlet weak var facialExpressionImageView: UIImageView!
@@ -30,6 +30,35 @@ class BAFacialExpressionDiscriptionViewController: BABaseViewController {
 			}
 		}
 	}
+
+	// MARK: - IBAction
+
+	@IBAction func takePhoto(_ sender: UIButton) {
+
+		// Present image picker to take photo
+		let picker = UIImagePickerController()
+
+		picker.delegate = self
+		picker.sourceType = .camera
+		picker.cameraDevice = .front
+
+		present(picker, animated: true) {
+			BALogger.info("Present image picker to take photo")
+		}
+	}
+
+	// MARK: - UIImagePickerControllerDelegate
+
+	func imagePickerController(_ picker: UIImagePickerController,
+							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+		// Dismiss image picker after taking photo
+		picker.dismiss(animated: true) {
+			BALogger.info("Dismiss image picker after taking photo")
+		}
+	}
+
+	// MARK: - Private methods
 
 	private func configureFacialExpressionLabel(_ facialExpression: String) {
 

@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>BestActor would like to use your camera to take photo.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>HoboStd.otf</string>

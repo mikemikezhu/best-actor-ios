@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="-2330.434782608696" y="809.59821428571422"/>
         </scene>
-        <!--Facial Expression Discription View Controller-->
+        <!--Facial Expression View Controller-->
         <scene sceneID="aKd-uw-6R9">
             <objects>
-                <viewController id="dKy-lH-NAu" customClass="BAFacialExpressionDiscriptionViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dKy-lH-NAu" customClass="BAFacialExpressionViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bbI-HV-HgW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +205,9 @@
                                     <constraint firstAttribute="height" constant="36" id="uzb-ZN-hGZ"/>
                                 </constraints>
                                 <state key="normal" title="READY GO!"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="dKy-lH-NAu" eventType="touchUpInside" id="DJJ-mP-RkL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
