@@ -57,19 +57,3 @@ class BALogger {
 		return components.isEmpty ? "" : components.last!
 	}
 }
-
-extension Date {
-
-	private static let dateFormat = "yyyy-MM-dd hh:mm:ssSSS"
-	private static var dateFormatter: DateFormatter {
-		let formatter = DateFormatter()
-		formatter.dateFormat = Date.dateFormat
-		formatter.locale = Locale.current
-		formatter.timeZone = TimeZone.current
-		return formatter
-	}
-
-	func toString() -> String {
-		return Date.dateFormatter.string(from: self as Date)
-	}
-}

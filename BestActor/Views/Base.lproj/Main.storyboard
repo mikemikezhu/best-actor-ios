@@ -209,6 +209,12 @@
                                     <action selector="takePhoto:" destination="dKy-lH-NAu" eventType="touchUpInside" id="DJJ-mP-RkL"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yow-Eg-3gK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="LnZ-vj-cxH" kind="embed" id="dsC-5J-Ji8"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -216,8 +222,12 @@
                             <constraint firstItem="R0N-uC-56i" firstAttribute="centerX" secondItem="bbI-HV-HgW" secondAttribute="centerX" id="2nK-kM-ThJ"/>
                             <constraint firstItem="PC0-bO-rdG" firstAttribute="centerX" secondItem="bbI-HV-HgW" secondAttribute="centerX" id="8yH-Hq-S6f"/>
                             <constraint firstItem="gyc-TM-5cG" firstAttribute="leading" secondItem="LsH-Ps-teK" secondAttribute="leading" constant="20" id="9kR-mP-Taw"/>
+                            <constraint firstItem="yow-Eg-3gK" firstAttribute="top" secondItem="bbI-HV-HgW" secondAttribute="top" id="9yr-8S-OUR"/>
                             <constraint firstItem="LsH-Ps-teK" firstAttribute="trailing" secondItem="78t-ne-Afx" secondAttribute="trailing" constant="20" id="AmF-ZO-I0y"/>
+                            <constraint firstAttribute="bottom" secondItem="yow-Eg-3gK" secondAttribute="bottom" id="EH6-x6-5Vv"/>
+                            <constraint firstItem="yow-Eg-3gK" firstAttribute="leading" secondItem="LsH-Ps-teK" secondAttribute="leading" id="IyI-sm-x3J"/>
                             <constraint firstItem="gyc-TM-5cG" firstAttribute="top" secondItem="78t-ne-Afx" secondAttribute="bottom" constant="20" id="R9H-TS-N9A"/>
+                            <constraint firstItem="yow-Eg-3gK" firstAttribute="trailing" secondItem="LsH-Ps-teK" secondAttribute="trailing" id="Xiz-XF-JCb"/>
                             <constraint firstItem="R0N-uC-56i" firstAttribute="top" secondItem="PC0-bO-rdG" secondAttribute="bottom" constant="50" id="h3D-lc-FmU"/>
                             <constraint firstItem="PC0-bO-rdG" firstAttribute="centerY" secondItem="bbI-HV-HgW" secondAttribute="centerY" constant="50" id="pEx-XW-t9q"/>
                             <constraint firstItem="78t-ne-Afx" firstAttribute="top" secondItem="LsH-Ps-teK" secondAttribute="top" constant="60" id="ptA-Oy-WM7"/>
@@ -228,6 +238,7 @@
                     <connections>
                         <outlet property="facialExpressionImageView" destination="PC0-bO-rdG" id="LNS-ab-DDx"/>
                         <outlet property="facialExpressionLabel" destination="gyc-TM-5cG" id="YMs-2W-cse"/>
+                        <outlet property="loadingContainerView" destination="yow-Eg-3gK" id="UXf-SL-b11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQM-qy-oaD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,6 +304,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1262.3188405797102" y="95.758928571428569"/>
+        </scene>
+        <!--Facial Expression Loading View Controller-->
+        <scene sceneID="1io-pZ-Srn">
+            <objects>
+                <viewController id="LnZ-vj-cxH" customClass="BAFacialExpressionLoadingViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqI-84-Rxe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GWj-fn-ax8">
+                                <rect key="frame" x="174" y="365" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="J7d-kQ-ECq"/>
+                                    <constraint firstAttribute="width" constant="66" id="uen-bm-qMq"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREDICTING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsY-WD-6KE" customClass="BATextLabel" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="151" y="446" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GWj-fn-ax8" firstAttribute="centerX" secondItem="oqI-84-Rxe" secondAttribute="centerX" id="236-fA-6e4"/>
+                            <constraint firstItem="WsY-WD-6KE" firstAttribute="top" secondItem="GWj-fn-ax8" secondAttribute="bottom" constant="15" id="7qV-nN-t0l"/>
+                            <constraint firstItem="GWj-fn-ax8" firstAttribute="centerY" secondItem="oqI-84-Rxe" secondAttribute="centerY" constant="-50" id="KE3-Dy-2wG"/>
+                            <constraint firstItem="WsY-WD-6KE" firstAttribute="centerX" secondItem="oqI-84-Rxe" secondAttribute="centerX" id="Okw-DO-XcV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bBd-Yz-YeH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-DD-yd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1264" y="1528"/>
         </scene>
     </scenes>
     <resources>

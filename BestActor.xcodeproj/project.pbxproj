@@ -15,6 +15,8 @@
 		2704B30023D17811002340CB /* BAServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FF23D17811002340CB /* BAServiceManager.swift */; };
 		2704B30323D18287002340CB /* BAFacialExpressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30223D18287002340CB /* BAFacialExpressionViewController.swift */; };
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
+		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
+		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -34,9 +36,15 @@
 		27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B1B60E23CCC39500D9E314 /* BestActor.xcdatamodeld */; };
 		27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B1B61123CCC39B00D9E314 /* Assets.xcassets */; };
 		27B1B61523CCC39B00D9E314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B1B61323CCC39B00D9E314 /* LaunchScreen.storyboard */; };
+		27FBC1E923D315D400956E5E /* BAFacialExpressionLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1E823D315D400956E5E /* BAFacialExpressionLoadingViewController.swift */; };
+		27FBC1EB23D33C1100956E5E /* BAPredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */; };
+		27FBC1ED23D3418500956E5E /* Date+CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */; };
+		27FBC1EF23D3605900956E5E /* UIImage+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */; };
+		FBF552AAB388EF094E4E8325 /* Pods_BestActor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F70320DB8FF72801FCBA9 /* Pods_BestActor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240F70320DB8FF72801FCBA9 /* Pods_BestActor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestActor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2704B2F223D0BA54002340CB /* BATutorialPageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATutorialPageDelegate.swift; sourceTree = "<group>"; };
 		2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACoreServiceFactory.swift; sourceTree = "<group>"; };
 		2704B2F923D166FB002340CB /* BAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAService.swift; sourceTree = "<group>"; };
@@ -45,6 +53,11 @@
 		2704B2FF23D17811002340CB /* BAServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAServiceManager.swift; sourceTree = "<group>"; };
 		2704B30223D18287002340CB /* BAFacialExpressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionViewController.swift; sourceTree = "<group>"; };
 		2704B30423D18CB8002340CB /* BALogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BALogger.swift; sourceTree = "<group>"; };
+		2704B31823D1CD40002340CB /* BestActor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BestActor-Bridging-Header.h"; sourceTree = "<group>"; };
+		2704B31923D1CD40002340CB /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -66,6 +79,12 @@
 		27B1B61123CCC39B00D9E314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B1B61423CCC39B00D9E314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B1B61623CCC39B00D9E314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FBC1E823D315D400956E5E /* BAFacialExpressionLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionLoadingViewController.swift; sourceTree = "<group>"; };
+		27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAPredictionService.swift; sourceTree = "<group>"; };
+		27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomDate.swift"; sourceTree = "<group>"; };
+		27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Orientation.swift"; sourceTree = "<group>"; };
+		A10649EA7319861EA5A6B833 /* Pods-BestActor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestActor.debug.xcconfig"; path = "Target Support Files/Pods-BestActor/Pods-BestActor.debug.xcconfig"; sourceTree = "<group>"; };
+		BDE713F363A1F66FF6177710 /* Pods-BestActor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestActor.release.xcconfig"; path = "Target Support Files/Pods-BestActor/Pods-BestActor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF552AAB388EF094E4E8325 /* Pods_BestActor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +106,7 @@
 				2704B2FF23D17811002340CB /* BAServiceManager.swift */,
 				2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */,
 				2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */,
+				27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -94,8 +115,28 @@
 			isa = PBXGroup;
 			children = (
 				2704B30223D18287002340CB /* BAFacialExpressionViewController.swift */,
+				27FBC1E823D315D400956E5E /* BAFacialExpressionLoadingViewController.swift */,
 			);
 			path = FacialExpression;
+			sourceTree = "<group>";
+		};
+		2704B31C23D1CE23002340CB /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				2704B31923D1CD40002340CB /* OpenCVWrapper.h */,
+				2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */,
+				2704B31823D1CD40002340CB /* BestActor-Bridging-Header.h */,
+				2704B31D23D1CE52002340CB /* PrefixHeader.pch */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		2704B31E23D1DC60002340CB /* HaarCascade */ = {
+			isa = PBXGroup;
+			children = (
+				2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */,
+			);
+			path = HaarCascade;
 			sourceTree = "<group>";
 		};
 		2786804B23CCCB4D00DBDEB8 /* Utils */ = {
@@ -103,6 +144,8 @@
 			children = (
 				2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */,
 				27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */,
+				27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */,
+				27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */,
 				2704B30423D18CB8002340CB /* BALogger.swift */,
 			);
 			path = Utils;
@@ -167,6 +210,8 @@
 			children = (
 				27B1B60423CCC39500D9E314 /* BestActor */,
 				27B1B60323CCC39500D9E314 /* Products */,
+				FEC9A65C65968D2A85E6DB02 /* Pods */,
+				7CCDF535761567D8084376C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,14 +229,33 @@
 				2786804F23CCD5B700DBDEB8 /* Views */,
 				2704B2F623D0C88D002340CB /* Services */,
 				2786804E23CCCFDD00DBDEB8 /* Delegates */,
+				2704B31C23D1CE23002340CB /* OpenCV */,
 				2786804B23CCCB4D00DBDEB8 /* Utils */,
 				2786805223CD920A00DBDEB8 /* Fonts */,
+				2704B31E23D1DC60002340CB /* HaarCascade */,
 				27B1B61123CCC39B00D9E314 /* Assets.xcassets */,
 				27B1B61623CCC39B00D9E314 /* Info.plist */,
 				2704B2FD23D16CE1002340CB /* FacialExpression.plist */,
 				27B1B60E23CCC39500D9E314 /* BestActor.xcdatamodeld */,
 			);
 			path = BestActor;
+			sourceTree = "<group>";
+		};
+		7CCDF535761567D8084376C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				240F70320DB8FF72801FCBA9 /* Pods_BestActor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEC9A65C65968D2A85E6DB02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A10649EA7319861EA5A6B833 /* Pods-BestActor.debug.xcconfig */,
+				BDE713F363A1F66FF6177710 /* Pods-BestActor.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B1B61923CCC39B00D9E314 /* Build configuration list for PBXNativeTarget "BestActor" */;
 			buildPhases = (
+				76DE996365459E258C6FF0B8 /* [CP] Check Pods Manifest.lock */,
 				27B1B5FE23CCC39500D9E314 /* Sources */,
 				27B1B5FF23CCC39500D9E314 /* Frameworks */,
 				27B1B60023CCC39500D9E314 /* Resources */,
@@ -226,6 +291,7 @@
 				TargetAttributes = {
 					27B1B60123CCC39500D9E314 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -254,6 +320,7 @@
 			files = (
 				2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */,
 				27B1B61523CCC39B00D9E314 /* LaunchScreen.storyboard in Resources */,
+				2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */,
 				27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */,
 				2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */,
 				2786805823CD921E00DBDEB8 /* HoboStd.otf in Resources */,
@@ -264,6 +331,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76DE996365459E258C6FF0B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestActor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27B1B5FE23CCC39500D9E314 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,6 +363,8 @@
 			files = (
 				2704B30023D17811002340CB /* BAServiceManager.swift in Sources */,
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
+				27FBC1ED23D3418500956E5E /* Date+CustomDate.swift in Sources */,
+				2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
 				2704B30523D18CB8002340CB /* BALogger.swift in Sources */,
@@ -279,9 +373,12 @@
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
 				2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */,
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
+				27FBC1EF23D3605900956E5E /* UIImage+Orientation.swift in Sources */,
 				278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */,
+				27FBC1E923D315D400956E5E /* BAFacialExpressionLoadingViewController.swift in Sources */,
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				2704B30323D18287002340CB /* BAFacialExpressionViewController.swift in Sources */,
+				27FBC1EB23D33C1100956E5E /* BAPredictionService.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
 				2704B2FC23D16B6B002340CB /* BAFacialExpressionService.swift in Sources */,
@@ -430,10 +527,14 @@
 		};
 		27B1B61A23CCC39B00D9E314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10649EA7319861EA5A6B833 /* Pods-BestActor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXTUYTMEVP;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BestActor/OpenCV/PrefixHeader.pch";
 				INFOPLIST_FILE = BestActor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +543,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,10 +552,14 @@
 		};
 		27B1B61B23CCC39B00D9E314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE713F363A1F66FF6177710 /* Pods-BestActor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXTUYTMEVP;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BestActor/OpenCV/PrefixHeader.pch";
 				INFOPLIST_FILE = BestActor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

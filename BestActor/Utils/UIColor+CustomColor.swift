@@ -17,6 +17,13 @@ extension UIColor {
 							alpha: 1.0)
 	}
 
+	class var customLoadingViewBackgroundColor: UIColor {
+		return UIColor.init(red: 0.0,
+							green: 0.0,
+							blue: 0.0,
+							alpha: 0.8)
+	}
+
 	class var customTitleColor: UIColor {
 		return UIColor.white
 	}
