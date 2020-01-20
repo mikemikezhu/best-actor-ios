@@ -40,16 +40,7 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 
 	@IBAction func takePhoto(_ sender: UIButton) {
 
-		// Present image picker to take photo
-		let picker = UIImagePickerController()
-
-		picker.delegate = self
-		picker.sourceType = .camera
-		picker.cameraDevice = .front
-
-		present(picker, animated: true) {
-			BALogger.info("Present image picker to take photo")
-		}
+		takePhoto()
 	}
 
 	// MARK: - Private methods
@@ -74,6 +65,56 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 
 		loadingContainerView.isHidden = true
 		loadingContainerView.isUserInteractionEnabled = false
+	}
+
+	private func takePhoto() {
+
+		// Present image picker to take photo
+		let picker = UIImagePickerController()
+
+		picker.delegate = self
+		picker.sourceType = .camera
+		picker.cameraDevice = .front
+
+		present(picker, animated: true) {
+			BALogger.info("Present image picker to take photo")
+		}
+	}
+
+	private func predictFacialExpression(_ image: UIImage) {
+
+		let identifier = String(describing: BAPredictionService.self)
+		let service = BACoreServiceFactory.sharedFactory.findService(identifier)
+
+		if let predictionService = service as? BAPredictionService {
+
+			do {
+				try predictionService.predictFacialExpression(image, {score in
+
+				})
+			} catch BAError.failToDetectFace {
+
+				// Show alert to take photo again
+				let alert = UIAlertController(title: "Face cannot be detected",
+											  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
+											  preferredStyle: .alert)
+
+				let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
+
+					// Hide loading container view
+					self.hideLoadingContainerView()
+
+					// Take photo again if fail to detect face
+					self.takePhoto()
+				})
+
+				alert.addAction(action)
+				self.present(alert, animated: true)
+
+			} catch {
+				BALogger.error("Fail to predict facial expression")
+			}
+		}
 	}
 }
 
@@ -101,13 +142,8 @@ extension BAFacialExpressionViewController: UIImagePickerControllerDelegate {
 			// Display loading container view
 			self.displayLoadingContainerView()
 
-			// Predict image
-			let identifier = String(describing: BAPredictionService.self)
-			let service = BACoreServiceFactory.sharedFactory.findService(identifier)
-
-			if let predictionService = service as? BAPredictionService {
-				predictionService.predictFacialExpression(image)
-			}
+			// Predict facial expression in image
+			self.predictFacialExpression(image)
 		}
 	}
 }

@@ -16,21 +16,20 @@ fileprivate struct BAPredictionServiceConstants {
 
 class BAPredictionService: NSObject {
 
-	func predictFacialExpression(_ image: UIImage) -> Double {
+	func predictFacialExpression(_ image: UIImage,
+								 _ completionHandler: (Double) -> ()) throws {
 
 		// Detect face in the image
 		let normalizedImage = image.fixOrientation()
 		guard let faceImage = OpenCVWrapper.detectFace(normalizedImage) else {
-			BALogger.warn("Fail to detect any face in the image")
-			return 0
+			BALogger.error("Fail to detect any face in the image")
+			throw BAError.failToDetectFace
 		}
 
 		#if DEBUG
 		// Save face image for debugging purpose
 		saveImageFile(faceImage)
 		#endif
-
-		return 0
 	}
 
 	private func saveImageFile(_ image: UIImage) {
