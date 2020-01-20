@@ -17,6 +17,7 @@
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
 		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
 		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
+		27295E8423D593B20029B818 /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8323D593B20029B818 /* BAError.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -58,6 +59,7 @@
 		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		27295E8323D593B20029B818 /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */,
 				27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */,
 				2704B30423D18CB8002340CB /* BALogger.swift */,
+				27295E8323D593B20029B818 /* BAError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
 				2704B2FA23D166FB002340CB /* BAService.swift in Sources */,
 				2704B2F823D0C8CD002340CB /* BACoreServiceFactory.swift in Sources */,
+				27295E8423D593B20029B818 /* BAError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
