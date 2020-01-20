@@ -239,11 +239,89 @@
                         <outlet property="facialExpressionImageView" destination="PC0-bO-rdG" id="LNS-ab-DDx"/>
                         <outlet property="facialExpressionLabel" destination="gyc-TM-5cG" id="YMs-2W-cse"/>
                         <outlet property="loadingContainerView" destination="yow-Eg-3gK" id="UXf-SL-b11"/>
+                        <segue destination="Qbq-FJ-Yqf" kind="presentation" identifier="segue_to_score" modalPresentationStyle="fullScreen" id="g6H-yI-j9b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQM-qy-oaD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1262.3188405797102" y="809.59821428571422"/>
+        </scene>
+        <!--Facial Expression Score View Controller-->
+        <scene sceneID="WS6-lr-2JN">
+            <objects>
+                <viewController id="Qbq-FJ-Yqf" customClass="BAFacialExpressionScoreViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uHw-g2-QdT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-av-uJF" customClass="BASubtitleLabel" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afK-85-2SU" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="145" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fmv-Yd-lCp" customClass="BAPhotoFrameImageView" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="79.5" y="337.5" width="255" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="e52-Ba-9Wh"/>
+                                    <constraint firstAttribute="width" constant="255" id="gCu-pf-o8a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP2-em-9fH" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="50" y="708.5" width="118" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="Jwx-pr-Rw3"/>
+                                    <constraint firstAttribute="height" constant="36" id="fOH-rk-VAe"/>
+                                </constraints>
+                                <state key="normal" title="SHARE PHOTO"/>
+                                <connections>
+                                    <action selector="sharePhoto:" destination="Qbq-FJ-Yqf" eventType="touchUpInside" id="m2L-oo-j1Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-6m-rkQ" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                                <rect key="frame" x="246" y="708.5" width="118" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="7Kc-8f-o9M"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="Pkx-gj-pL2"/>
+                                </constraints>
+                                <state key="normal" title="PLAY AGAIN"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="m5C-FT-LFn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vzs-6m-rkQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CP2-em-9fH" secondAttribute="trailing" constant="8" symbolic="YES" id="20D-Gz-aRh"/>
+                            <constraint firstItem="eo0-av-uJF" firstAttribute="top" secondItem="S0I-Fa-R4f" secondAttribute="top" constant="60" id="9wY-7g-Vdk"/>
+                            <constraint firstItem="S0I-Fa-R4f" firstAttribute="trailing" secondItem="Vzs-6m-rkQ" secondAttribute="trailing" constant="50" id="AnP-Wr-lyM"/>
+                            <constraint firstItem="afK-85-2SU" firstAttribute="leading" secondItem="S0I-Fa-R4f" secondAttribute="leading" constant="20" id="O9K-7p-Epr"/>
+                            <constraint firstItem="S0I-Fa-R4f" firstAttribute="trailing" secondItem="eo0-av-uJF" secondAttribute="trailing" constant="20" id="QH6-D9-e9V"/>
+                            <constraint firstItem="eo0-av-uJF" firstAttribute="leading" secondItem="S0I-Fa-R4f" secondAttribute="leading" constant="20" id="Ssw-Zy-diD"/>
+                            <constraint firstItem="Fmv-Yd-lCp" firstAttribute="centerX" secondItem="uHw-g2-QdT" secondAttribute="centerX" id="YWD-em-1jL"/>
+                            <constraint firstItem="CP2-em-9fH" firstAttribute="top" secondItem="Fmv-Yd-lCp" secondAttribute="bottom" constant="50" id="cs9-Tu-LVy"/>
+                            <constraint firstItem="afK-85-2SU" firstAttribute="top" secondItem="eo0-av-uJF" secondAttribute="bottom" constant="20" id="gvv-oP-RCg"/>
+                            <constraint firstItem="S0I-Fa-R4f" firstAttribute="trailing" secondItem="afK-85-2SU" secondAttribute="trailing" constant="20" id="pg9-Qo-8Aq"/>
+                            <constraint firstItem="Vzs-6m-rkQ" firstAttribute="top" secondItem="Fmv-Yd-lCp" secondAttribute="bottom" constant="50" id="pv6-vD-cMG"/>
+                            <constraint firstItem="CP2-em-9fH" firstAttribute="leading" secondItem="S0I-Fa-R4f" secondAttribute="leading" constant="50" id="rAT-UM-Mhq"/>
+                            <constraint firstItem="Fmv-Yd-lCp" firstAttribute="centerY" secondItem="uHw-g2-QdT" secondAttribute="centerY" constant="50" id="wPQ-vA-9sI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S0I-Fa-R4f"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceImageView" destination="Fmv-Yd-lCp" id="g5T-wc-Os2"/>
+                        <outlet property="scoreLabel" destination="afK-85-2SU" id="UWU-Gb-Izz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4rc-z0-vF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.26086956521743" y="809.59821428571422"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -349,4 +427,7 @@
         <image name="tutorial_1" width="273" height="507"/>
         <image name="tutorial_2" width="273" height="507"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m5C-FT-LFn"/>
+    </inferredMetricsTieBreakers>
 </document>

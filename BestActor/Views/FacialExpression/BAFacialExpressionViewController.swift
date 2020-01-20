@@ -8,12 +8,20 @@
 
 import UIKit
 
+fileprivate struct BAFacialExpressionViewControllerConstants {
+
+	static let SEGUE_TO_SCORE_IDENTIFIER = "segue_to_score"
+}
+
 class BAFacialExpressionViewController: BABaseViewController, UINavigationControllerDelegate {
 
 	@IBOutlet weak var facialExpressionLabel: BATitleLabel!
 	@IBOutlet weak var facialExpressionImageView: UIImageView!
 
 	@IBOutlet weak var loadingContainerView: UIView!
+
+	private var image: UIImage?
+	private var score: Double?
 
 	override func viewDidLoad() {
 
@@ -35,15 +43,66 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 		// Hide loading container view
 		hideLoadingContainerView()
 	}
+}
 
-	// MARK: - IBAction
+// MARK: - UIImagePickerControllerDelegate
 
-	@IBAction func takePhoto(_ sender: UIButton) {
+extension BAFacialExpressionViewController: UIImagePickerControllerDelegate {
 
+	func imagePickerController(_ picker: UIImagePickerController,
+							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+		// Dismiss image picker after taking photo
+		picker.dismiss(animated: true) {
+
+			BALogger.info("Dismiss image picker after taking photo")
+
+			var image: UIImage
+			if let possibleImage = info[.editedImage] as? UIImage {
+				image = possibleImage
+			} else if let possibleImage = info[.originalImage] as? UIImage {
+				image = possibleImage
+			} else {
+				return
+			}
+
+			// Display loading container view
+			self.displayLoadingContainerView()
+
+			// Predict facial expression in image
+			self.predictFacialExpression(image)
+		}
+	}
+}
+
+// MARK: - IBAction
+
+extension BAFacialExpressionViewController {
+
+	@IBAction func takePhoto(_ sender: BAButton) {
 		takePhoto()
 	}
+}
 
-	// MARK: - Private methods
+// MARK: - Navigation
+
+extension BAFacialExpressionViewController {
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+		if segue.identifier == BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER {
+			if let scoreViewController = segue.destination as? BAFacialExpressionScoreViewController {
+				// Make sure the image and score shall exist
+				scoreViewController.image = image!
+				scoreViewController.score = score!
+			}
+		}
+	}
+}
+
+// MARK: - Private methods
+
+extension BAFacialExpressionViewController {
 
 	private func configureFacialExpressionLabel(_ facialExpression: String) {
 
@@ -91,6 +150,13 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 			do {
 				try predictionService.predictFacialExpression(image, {score in
 
+					// Set score and image
+					self.image = image
+					self.score = score
+
+					// Segue to score page
+					performSegue(withIdentifier: BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER,
+								 sender: self)
 				})
 			} catch BAError.failToDetectFace {
 
@@ -100,7 +166,7 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 											  preferredStyle: .alert)
 
 				let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
-
+					
 					// Hide loading container view
 					self.hideLoadingContainerView()
 
@@ -110,40 +176,10 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 
 				alert.addAction(action)
 				self.present(alert, animated: true)
-
+				
 			} catch {
 				BALogger.error("Fail to predict facial expression")
 			}
-		}
-	}
-}
-
-extension BAFacialExpressionViewController: UIImagePickerControllerDelegate {
-
-	// MARK: - UIImagePickerControllerDelegate
-
-	func imagePickerController(_ picker: UIImagePickerController,
-							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
-		// Dismiss image picker after taking photo
-		picker.dismiss(animated: true) {
-
-			BALogger.info("Dismiss image picker after taking photo")
-
-			var image: UIImage
-			if let possibleImage = info[.editedImage] as? UIImage {
-				image = possibleImage
-			} else if let possibleImage = info[.originalImage] as? UIImage {
-				image = possibleImage
-			} else {
-				return
-			}
-
-			// Display loading container view
-			self.displayLoadingContainerView()
-
-			// Predict facial expression in image
-			self.predictFacialExpression(image)
 		}
 	}
 }

@@ -30,6 +30,9 @@ class BAPredictionService: NSObject {
 		// Save face image for debugging purpose
 		saveImageFile(faceImage)
 		#endif
+
+		// TODO:
+		completionHandler(666.0)
 	}
 
 	private func saveImageFile(_ image: UIImage) {
