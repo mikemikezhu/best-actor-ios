@@ -22,9 +22,9 @@ static NSString *const OPENCV_WRAPPER_HAAR_CASCADE_FRONTAL_FACE_TYPE = @"xml";
 static const double OPENCV_WRAPPER_SCALING_FACTOR = 1.1;
 static const int OPENCV_WRAPPER_MIN_NEIGHBORS = 3;
 static const int OPENCV_WRAPPER_FLAGS = 0;
-static const double OPENCV_WRAPPER_MIN_SIZE = 50;
 
-static const int OPENCV_WRAPPER_RECTANGLE_THICKNESS = 5;
+static const double OPENCV_WRAPPER_MIN_SIZE = 160;
+static const double OPENCV_WRAPPER_MAX_SIZE = 900;
 
 @implementation OpenCVWrapper
 
@@ -50,15 +50,23 @@ static const int OPENCV_WRAPPER_RECTANGLE_THICKNESS = 5;
 
 	// Initialize vars for classifier
 	const cv::Size minimumSize(OPENCV_WRAPPER_MIN_SIZE, OPENCV_WRAPPER_MIN_SIZE);
+	const cv::Size maximumSize(OPENCV_WRAPPER_MAX_SIZE, OPENCV_WRAPPER_MAX_SIZE);
 
 	// Classify functions
 	std::vector<cv::Rect> detections;
+	std::vector<int> rejectLevels;
+	std::vector<double> levelWeights;
+
 	classifier.detectMultiScale(grayMat,
 								detections,
+								rejectLevels,
+								levelWeights,
 								OPENCV_WRAPPER_SCALING_FACTOR,
 								OPENCV_WRAPPER_MIN_NEIGHBORS,
 								OPENCV_WRAPPER_FLAGS,
-								minimumSize);
+								minimumSize,
+								maximumSize,
+								true);
 
 	// If no detections found, return nil
 	if (detections.size() <= 0) {
@@ -66,20 +74,27 @@ static const int OPENCV_WRAPPER_RECTANGLE_THICKNESS = 5;
 		return nil;
 	}
 
-	// Loop through detections
-	for (auto &face : detections) {
-		const cv::Point startPoint(face.x, face.y);
-		const cv::Point endPoint = startPoint + cv::Point(face.width, face.height);
-		const cv::Scalar color = cv::Scalar(225, 255, 0);
-		cv::rectangle(colorMat,
-					  startPoint,
-					  endPoint,
-					  color,
-					  OPENCV_WRAPPER_RECTANGLE_THICKNESS);
+	// Loop to find the most confident detections
+	double maxWeight = 0;
+	std::map<double, cv::Rect> faces;
+
+	for (int i = 0; i < detections.size(); i++) {
+		
+		cv::Rect face = detections[i];
+		double weight = levelWeights[i];
+
+		if (weight > maxWeight) {
+			faces[weight] = face;
+			maxWeight = weight;
+		}
 	}
 
+	// Crop the image
+	cv::Rect maxFace = faces[maxWeight];
+	cv::Mat roi = grayMat(maxFace);
+
 	CV_LOG_INFO(NULL, "Successfully detect face");
-	return MatToUIImage(colorMat);
+	return MatToUIImage(roi);
 }
 
 @end
