@@ -90,6 +90,8 @@ class BAPredictionService: NSObject {
 					return
 				}
 
+				BALogger.info("Prediction result: \(results)")
+
 				for result in results {
 					if let result = result as? VNClassificationObservation,
 						let modelLabel = BAModelLabelConverter.convertModelLabel(label) {
