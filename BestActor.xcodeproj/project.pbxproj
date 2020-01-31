@@ -17,6 +17,9 @@
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
 		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
 		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
+		2717D82123E1BC6000909884 /* BAModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82023E1BC6000909884 /* BAModel.mlmodel */; };
+		2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */; };
+		2717D82523E2FBA800909884 /* BAModelLabelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */; };
 		27295E8423D593B20029B818 /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8323D593B20029B818 /* BAError.swift */; };
 		27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
@@ -60,6 +63,9 @@
 		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		2717D82023E1BC6000909884 /* BAModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BAModel.mlmodel; sourceTree = "<group>"; };
+		2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
+		2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAModelLabelConverter.swift; sourceTree = "<group>"; };
 		27295E8323D593B20029B818 /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
 		27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionScoreViewController.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
@@ -144,13 +150,23 @@
 			path = HaarCascade;
 			sourceTree = "<group>";
 		};
+		2717D81B23E1A50B00909884 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				2717D82023E1BC6000909884 /* BAModel.mlmodel */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
 		2786804B23CCCB4D00DBDEB8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */,
 				27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */,
 				27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */,
+				2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */,
 				27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */,
+				2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */,
 				2704B30423D18CB8002340CB /* BALogger.swift */,
 				27295E8323D593B20029B818 /* BAError.swift */,
 			);
@@ -239,6 +255,7 @@
 				2786804B23CCCB4D00DBDEB8 /* Utils */,
 				2786805223CD920A00DBDEB8 /* Fonts */,
 				2704B31E23D1DC60002340CB /* HaarCascade */,
+				2717D81B23E1A50B00909884 /* ML */,
 				27B1B61123CCC39B00D9E314 /* Assets.xcassets */,
 				27B1B61623CCC39B00D9E314 /* Info.plist */,
 				2704B2FD23D16CE1002340CB /* FacialExpression.plist */,
@@ -369,6 +386,7 @@
 			files = (
 				2704B30023D17811002340CB /* BAServiceManager.swift in Sources */,
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
+				2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */,
 				27FBC1ED23D3418500956E5E /* Date+CustomDate.swift in Sources */,
 				2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
@@ -384,6 +402,7 @@
 				27FBC1E923D315D400956E5E /* BAFacialExpressionLoadingViewController.swift in Sources */,
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				2704B30323D18287002340CB /* BAFacialExpressionViewController.swift in Sources */,
+				2717D82523E2FBA800909884 /* BAModelLabelConverter.swift in Sources */,
 				27FBC1EB23D33C1100956E5E /* BAPredictionService.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
@@ -394,6 +413,7 @@
 				27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */,
 				2704B2F823D0C8CD002340CB /* BACoreServiceFactory.swift in Sources */,
 				27295E8423D593B20029B818 /* BAError.swift in Sources */,
+				2717D82123E1BC6000909884 /* BAModel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 fileprivate struct BAPredictionServiceConstants {
 
@@ -17,13 +19,15 @@ fileprivate struct BAPredictionServiceConstants {
 class BAPredictionService: NSObject {
 
 	func predictFacialExpression(_ image: UIImage,
-								 _ completionHandler: (Double) -> ()) throws {
+								 _ label: String,
+								 _ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
 
 		// Detect face in the image
 		let normalizedImage = image.fixOrientation()
 		guard let faceImage = OpenCVWrapper.detectFace(normalizedImage) else {
 			BALogger.error("Fail to detect any face in the image")
-			throw BAError.failToDetectFace
+			completion(nil, BAError.failToDetectFace)
+			return
 		}
 
 		#if DEBUG
@@ -31,8 +35,21 @@ class BAPredictionService: NSObject {
 		saveImageFile(faceImage)
 		#endif
 
-		// TODO:
-		completionHandler(666.0)
+		if #available(iOS 13.0, *) {
+			try makePrediction(image,
+							   label,
+							   completion)
+		} else {
+
+			// TODO: For debug purpose only, shall removed later
+			if label == "happy" {
+				completion(98.0, nil)
+			} else if label == "sad" {
+				completion(99.0, nil)
+			} else if label == "surprise" {
+				completion(96.0, nil)
+			}
+		}
 	}
 
 	private func saveImageFile(_ image: UIImage) {
@@ -66,6 +83,49 @@ class BAPredictionService: NSObject {
 										   contents: imageData,
 										   attributes: nil) {
 			BALogger.warn("Fail to save to image path: \(urlString)")
+		}
+	}
+
+	@available(iOS 13.0, *)
+	private func makePrediction(_ image: UIImage,
+								_ label: String,
+								_ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
+
+		let model = try VNCoreMLModel(for: BAModel().model)
+		let request = VNCoreMLRequest(model: model, completionHandler: { request, error in
+
+			DispatchQueue.main.async {
+				guard let results = request.results else {
+					completion(nil, error)
+					return
+				}
+
+				for result in results {
+					if let result = result as? VNClassificationObservation,
+						let modelLabel = BAModelLabelConverter.convertModelLabel(label) {
+
+						if modelLabel == result.identifier {
+							completion(result.confidence, nil)
+							return
+						}
+					}
+				}
+
+				completion(nil, BAError.failToPredict)
+			}
+		})
+
+		request.imageCropAndScaleOption = .scaleFill
+
+		DispatchQueue.global(qos: .userInitiated).async {
+			if let ciImage = CIImage(image: image) {
+				let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+				do {
+					try handler.perform([request])
+				} catch {
+					completion(nil, BAError.failToPredict)
+				}
+			}
 		}
 	}
 }

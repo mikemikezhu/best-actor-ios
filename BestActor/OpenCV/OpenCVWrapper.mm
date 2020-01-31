@@ -93,8 +93,11 @@ static const double OPENCV_WRAPPER_MAX_SIZE = 900;
 	cv::Rect maxFace = faces[maxWeight];
 	cv::Mat roi = grayMat(maxFace);
 
+	cv::Mat destination;
+	cv::resize(roi, destination, cv::Size(48, 48));
+
 	CV_LOG_INFO(NULL, "Successfully detect face");
-	return MatToUIImage(roi);
+	return MatToUIImage(destination);
 }
 
 @end

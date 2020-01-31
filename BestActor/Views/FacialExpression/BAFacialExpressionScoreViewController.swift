@@ -13,7 +13,7 @@ class BAFacialExpressionScoreViewController: BABaseViewController {
 	// Make sure image and score shall exist
 	// When the view controller initialized
 	var image: UIImage!
-	var score: Double!
+	var score: Float!
 
 	@IBOutlet weak var faceImageView: BAPhotoFrameImageView!
 	@IBOutlet weak var scoreLabel: BATitleLabel!
@@ -31,7 +31,7 @@ class BAFacialExpressionScoreViewController: BABaseViewController {
 extension BAFacialExpressionScoreViewController {
 
 	@IBAction func sharePhoto(_ sender: BAButton) {
-		sharePhoto()
+
 	}
 }
 

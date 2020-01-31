@@ -21,7 +21,8 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 	@IBOutlet weak var loadingContainerView: UIView!
 
 	private var image: UIImage?
-	private var score: Double?
+	private var score: Float?
+	private var facialExpression: String?
 
 	override func viewDidLoad() {
 
@@ -35,6 +36,7 @@ class BAFacialExpressionViewController: BABaseViewController, UINavigationContro
 
 			if let facialExpression = facialExpressionService.loadFacialExpression() {
 				BALogger.info("Load facial expression: \(facialExpression)")
+				self.facialExpression = facialExpression
 				configureFacialExpressionLabel(facialExpression)
 				configureFacialExpressionImageView(facialExpression)
 			}
@@ -80,7 +82,12 @@ extension BAFacialExpressionViewController: UIImagePickerControllerDelegate {
 extension BAFacialExpressionViewController {
 
 	@IBAction func takePhoto(_ sender: BAButton) {
-		takePhoto()
+
+		if !UIDevice.current.isSimulator {
+			takePhoto()
+		} else {
+			BALogger.warn("Please run the model on iOS devices >= 13.0")
+		}
 	}
 }
 
@@ -145,38 +152,44 @@ extension BAFacialExpressionViewController {
 		let identifier = String(describing: BAPredictionService.self)
 		let service = BACoreServiceFactory.sharedFactory.findService(identifier)
 
-		if let predictionService = service as? BAPredictionService {
+		if let predictionService = service as? BAPredictionService,
+			let facialExpression = self.facialExpression {
 
 			do {
-				try predictionService.predictFacialExpression(image, {score in
+				try predictionService.predictFacialExpression(image, facialExpression, { (score, error) in
 
-					// Set score and image
-					self.image = image
-					self.score = score
+					if let error = error {
 
-					// Segue to score page
-					performSegue(withIdentifier: BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER,
-								 sender: self)
+						if case BAError.failToDetectFace = error {
+
+							// Show alert to take photo again
+							let alert = UIAlertController(title: "Face cannot be detected",
+														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
+														  preferredStyle: .alert)
+
+							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
+
+								// Hide loading container view
+								self.hideLoadingContainerView()
+
+								// Take photo again if fail to detect face
+								self.takePhoto()
+							})
+
+							alert.addAction(action)
+							self.present(alert, animated: true)
+						}
+					} else {
+
+						// Set score and image
+						self.image = image
+						self.score = score
+
+						// Segue to score page
+						self.performSegue(withIdentifier: BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER,
+										  sender: self)
+					}
 				})
-			} catch BAError.failToDetectFace {
-
-				// Show alert to take photo again
-				let alert = UIAlertController(title: "Face cannot be detected",
-											  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
-											  preferredStyle: .alert)
-
-				let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
-					
-					// Hide loading container view
-					self.hideLoadingContainerView()
-
-					// Take photo again if fail to detect face
-					self.takePhoto()
-				})
-
-				alert.addAction(action)
-				self.present(alert, animated: true)
-				
 			} catch {
 				BALogger.error("Fail to predict facial expression")
 			}
