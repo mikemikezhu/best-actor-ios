@@ -35,21 +35,10 @@ class BAPredictionService: NSObject {
 		saveImageFile(faceImage)
 		#endif
 
-		if #available(iOS 13.0, *) {
-			try makePrediction(image,
-							   label,
-							   completion)
-		} else {
-
-			// TODO: For debug purpose only, shall removed later
-			if label == "happy" {
-				completion(98.0, nil)
-			} else if label == "sad" {
-				completion(99.0, nil)
-			} else if label == "surprise" {
-				completion(96.0, nil)
-			}
-		}
+		// Make prediction
+		try makePrediction(image,
+						   label,
+						   completion)
 	}
 
 	private func saveImageFile(_ image: UIImage) {
@@ -86,15 +75,16 @@ class BAPredictionService: NSObject {
 		}
 	}
 
-	@available(iOS 13.0, *)
 	private func makePrediction(_ image: UIImage,
 								_ label: String,
 								_ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
 
-		let model = try VNCoreMLModel(for: BAModel().model)
+		// Create CoreML request
+		let model = try VNCoreMLModel(for: BAFerModel().model)
 		let request = VNCoreMLRequest(model: model, completionHandler: { request, error in
 
 			DispatchQueue.main.async {
+				// Prediction result
 				guard let results = request.results else {
 					completion(nil, error)
 					return
@@ -105,7 +95,10 @@ class BAPredictionService: NSObject {
 						let modelLabel = BAModelLabelConverter.convertModelLabel(label) {
 
 						if modelLabel == result.identifier {
-							completion(result.confidence, nil)
+							// Confidence of the prediction result
+							let confidence = result.confidence
+							BALogger.info("Confidence for label \(modelLabel): \(confidence)")
+							completion(confidence, nil)
 							return
 						}
 					}
@@ -118,6 +111,7 @@ class BAPredictionService: NSObject {
 		request.imageCropAndScaleOption = .scaleFill
 
 		DispatchQueue.global(qos: .userInitiated).async {
+			// Perform prediction
 			if let ciImage = CIImage(image: image) {
 				let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
 				do {
