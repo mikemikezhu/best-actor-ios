@@ -22,7 +22,8 @@ class BAFacialExpressionScoreViewController: BABaseViewController {
 		super.viewDidLoad()
 
 		faceImageView.image = image
-		scoreLabel.text = String(score)
+		score = score * 100
+		scoreLabel.text = String(format: "%.2f", score) + "%"
 	}
 }
 
