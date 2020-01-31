@@ -17,9 +17,9 @@
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
 		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
 		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
-		2717D82123E1BC6000909884 /* BAModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82023E1BC6000909884 /* BAModel.mlmodel */; };
 		2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */; };
 		2717D82523E2FBA800909884 /* BAModelLabelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */; };
+		2717D82923E3DF3B00909884 /* BAFerModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */; };
 		27295E8423D593B20029B818 /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8323D593B20029B818 /* BAError.swift */; };
 		27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
@@ -63,9 +63,9 @@
 		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
-		2717D82023E1BC6000909884 /* BAModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BAModel.mlmodel; sourceTree = "<group>"; };
 		2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAModelLabelConverter.swift; sourceTree = "<group>"; };
+		2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BAFerModel.mlmodel; sourceTree = "<group>"; };
 		27295E8323D593B20029B818 /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
 		27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionScoreViewController.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		2717D81B23E1A50B00909884 /* ML */ = {
 			isa = PBXGroup;
 			children = (
-				2717D82023E1BC6000909884 /* BAModel.mlmodel */,
+				2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */,
 			);
 			path = ML;
 			sourceTree = "<group>";
@@ -411,9 +411,9 @@
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
 				2704B2FA23D166FB002340CB /* BAService.swift in Sources */,
 				27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */,
+				2717D82923E3DF3B00909884 /* BAFerModel.mlmodel in Sources */,
 				2704B2F823D0C8CD002340CB /* BACoreServiceFactory.swift in Sources */,
 				27295E8423D593B20029B818 /* BAError.swift in Sources */,
-				2717D82123E1BC6000909884 /* BAModel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
