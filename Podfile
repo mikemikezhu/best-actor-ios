@@ -7,5 +7,6 @@ target 'BestActor' do
 
   # Pods for BestActor
   pod 'OpenCV2'
+  pod 'TensorFlowLiteSwift'
 
 end

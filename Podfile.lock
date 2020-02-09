@@ -1,16 +1,24 @@
 PODS:
   - OpenCV2 (4.1.2)
+  - TensorFlowLiteC (2.1.0)
+  - TensorFlowLiteSwift (2.1.0):
+    - TensorFlowLiteC (= 2.1.0)
 
 DEPENDENCIES:
   - OpenCV2
+  - TensorFlowLiteSwift
 
 SPEC REPOS:
   trunk:
     - OpenCV2
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
 
 SPEC CHECKSUMS:
   OpenCV2: 3ac0512dabaddda936f112507f9095697d392551
+  TensorFlowLiteC: 215603d4426d93810eace5947e317389554a4b66
+  TensorFlowLiteSwift: 9d8137f18d5ac30ca89bba4fbe118e0949ac5743
 
-PODFILE CHECKSUM: 8530c48b67216b6ac0c59924a697aa7bcb802edc
+PODFILE CHECKSUM: 6f9959039df9851ae2ab5241e9023bb8088ff45f
 
 COCOAPODS: 1.8.4
