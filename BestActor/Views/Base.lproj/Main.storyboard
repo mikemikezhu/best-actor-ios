@@ -391,7 +391,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GWj-fn-ax8">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GWj-fn-ax8">
                                 <rect key="frame" x="174" y="365" width="66" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="J7d-kQ-ECq"/>
@@ -415,6 +415,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bBd-Yz-YeH"/>
                     </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="GWj-fn-ax8" id="Rkb-QT-mP4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-DD-yd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
