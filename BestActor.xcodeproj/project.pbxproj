@@ -23,6 +23,8 @@
 		27295E8423D593B20029B818 /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8323D593B20029B818 /* BAError.swift */; };
 		27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */; };
 		2778FD8723F149DA00097A0B /* BAProcessImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778FD8623F149DA00097A0B /* BAProcessImageService.swift */; };
+		2778FD8B23F15F9400097A0B /* BACameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778FD8A23F15F9400097A0B /* BACameraOverlayView.swift */; };
+		2778FD8D23F18ACE00097A0B /* BAGlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778FD8C23F18ACE00097A0B /* BAGlobalConstants.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -69,6 +71,8 @@
 		27295E8323D593B20029B818 /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
 		27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionScoreViewController.swift; sourceTree = "<group>"; };
 		2778FD8623F149DA00097A0B /* BAProcessImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAProcessImageService.swift; sourceTree = "<group>"; };
+		2778FD8A23F15F9400097A0B /* BACameraOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACameraOverlayView.swift; sourceTree = "<group>"; };
+		2778FD8C23F18ACE00097A0B /* BAGlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAGlobalConstants.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */,
 				2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */,
 				27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */,
+				2778FD8C23F18ACE00097A0B /* BAGlobalConstants.swift */,
 				2704B30423D18CB8002340CB /* BALogger.swift */,
 				27295E8323D593B20029B818 /* BAError.swift */,
 			);
@@ -221,6 +226,7 @@
 				27A17F5223CD99E7002D0EA3 /* BATitleLabel.swift */,
 				27A17F5423CD9C5D002D0EA3 /* BAButton.swift */,
 				27A17F5623CDA28B002D0EA3 /* BASubtitleLabel.swift */,
+				2778FD8A23F15F9400097A0B /* BACameraOverlayView.swift */,
 				27A17F5823CDA420002D0EA3 /* BAPhotoFrameImageView.swift */,
 				27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */,
 			);
@@ -395,9 +401,11 @@
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
 				2704B30523D18CB8002340CB /* BALogger.swift in Sources */,
 				27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */,
+				2778FD8D23F18ACE00097A0B /* BAGlobalConstants.swift in Sources */,
 				27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */,
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
 				2778FD8723F149DA00097A0B /* BAProcessImageService.swift in Sources */,
+				2778FD8B23F15F9400097A0B /* BACameraOverlayView.swift in Sources */,
 				2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */,
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
 				278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */,

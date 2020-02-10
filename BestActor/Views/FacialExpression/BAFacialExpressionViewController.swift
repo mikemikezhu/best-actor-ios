@@ -142,6 +142,18 @@ extension BAFacialExpressionViewController {
 		picker.sourceType = .camera
 		picker.cameraDevice = .front
 
+		let width = view.bounds.width
+		let height = view.bounds.height
+
+		let roiSideLength = CGFloat(BAGlobalConstants.ROI_SIDE_FACTOR) * width
+
+		let x = (width - roiSideLength) / 2
+		let y = (height - roiSideLength) / 2
+		let frame = CGRect(x: x, y: y, width: roiSideLength, height: roiSideLength)
+
+		let cameraOverlayView = BACameraOverlayView(frame: frame)
+		picker.cameraOverlayView = cameraOverlayView
+
 		present(picker, animated: true) {
 			BALogger.info("Present image picker to take photo")
 		}
@@ -160,25 +172,25 @@ extension BAFacialExpressionViewController {
 
 					if let error = error {
 
-//						if case BAError.failToDetectFace = error {
-//
-//							// Show alert to take photo again
-//							let alert = UIAlertController(title: "Face cannot be detected",
-//														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
-//														  preferredStyle: .alert)
-//
-//							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
-//
-//								// Hide loading container view
-//								self.hideLoadingContainerView()
-//
-//								// Take photo again if fail to detect face
-//								self.takePhoto()
-//							})
-//
-//							alert.addAction(action)
-//							self.present(alert, animated: true)
-//						}
+						//						if case BAError.failToDetectFace = error {
+						//
+						//							// Show alert to take photo again
+						//							let alert = UIAlertController(title: "Face cannot be detected",
+						//														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
+						//														  preferredStyle: .alert)
+						//
+						//							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
+						//
+						//								// Hide loading container view
+						//								self.hideLoadingContainerView()
+						//
+						//								// Take photo again if fail to detect face
+						//								self.takePhoto()
+						//							})
+						//
+						//							alert.addAction(action)
+						//							self.present(alert, animated: true)
+						//						}
 					} else {
 
 						// Set score and image

@@ -19,9 +19,6 @@ fileprivate struct BAPredictionServiceConstants {
 	// Labels: labels.txt
 	static let LABELS_INFO_FILE_NAME = "labels"
 	static let LABELS_INFO_FILE_EXTENSION = "txt"
-
-	static let ROI_SIDE_LENGTH = CGFloat(960.0)
-	static let RESIZED_SIDE_LENGTH = CGFloat(48.0)
 }
 
 fileprivate struct BAInference {
@@ -85,7 +82,13 @@ class BAPredictionService {
 								 _ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
 		
 		// Process the image
-		guard let processedImage = processImageService.processImage(image, BAPredictionServiceConstants.ROI_SIDE_LENGTH, BAPredictionServiceConstants.RESIZED_SIDE_LENGTH) else {
+		let width = UIScreen.main.bounds.size.width
+		let screenScale = UIScreen.main.scale
+		let roiSideLength = CGFloat(BAGlobalConstants.ROI_SIDE_FACTOR) * width * screenScale
+		BALogger.info("Square ROI side length: \(roiSideLength)")
+
+		let resizedSideLength = CGFloat(BAGlobalConstants.RESIZED_SIDE_LENGTH)
+		guard let processedImage = processImageService.processImage(image, roiSideLength, resizedSideLength) else {
 			BALogger.error("Fail to process image")
 			completion(nil, BAError.failToProcessImage)
 			return

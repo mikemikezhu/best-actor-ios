@@ -24,6 +24,14 @@ extension UIColor {
 							alpha: 0.8)
 	}
 
+	class var customCameraOverlayViewBorderColor: UIColor {
+		return UIColor.white
+	}
+
+	class var customCameraOverlayViewBackgroundColor: UIColor {
+		return UIColor.clear
+	}
+
 	class var customTitleColor: UIColor {
 		return UIColor.white
 	}
