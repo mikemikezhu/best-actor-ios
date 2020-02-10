@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27B1B60123CCC39500D9E314"
-               BuildableName = "BestActor.app"
+               BuildableName = "Best Actor.app"
                BlueprintName = "BestActor"
                ReferencedContainer = "container:BestActor.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27B1B60123CCC39500D9E314"
-            BuildableName = "BestActor.app"
+            BuildableName = "Best Actor.app"
             BlueprintName = "BestActor"
             ReferencedContainer = "container:BestActor.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27B1B60123CCC39500D9E314"
-            BuildableName = "BestActor.app"
+            BuildableName = "Best Actor.app"
             BlueprintName = "BestActor"
             ReferencedContainer = "container:BestActor.xcodeproj">
          </BuildableReference>

@@ -86,7 +86,7 @@
 		27A17F5623CDA28B002D0EA3 /* BASubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASubtitleLabel.swift; sourceTree = "<group>"; };
 		27A17F5823CDA420002D0EA3 /* BAPhotoFrameImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAPhotoFrameImageView.swift; sourceTree = "<group>"; };
 		27A17F5B23CDB5BF002D0EA3 /* BATextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BATextLabel.swift; sourceTree = "<group>"; };
-		27B1B60223CCC39500D9E314 /* BestActor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestActor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B1B60223CCC39500D9E314 /* Best Actor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Actor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B1B60523CCC39500D9E314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B1B60723CCC39500D9E314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		27B1B60C23CCC39500D9E314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		27B1B60323CCC39500D9E314 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27B1B60223CCC39500D9E314 /* BestActor.app */,
+				27B1B60223CCC39500D9E314 /* Best Actor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 			);
 			name = BestActor;
 			productName = BestActor;
-			productReference = 27B1B60223CCC39500D9E314 /* BestActor.app */;
+			productReference = 27B1B60223CCC39500D9E314 /* Best Actor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -579,7 +579,7 @@
 				);
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Best Actor";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -604,7 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Best Actor";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
