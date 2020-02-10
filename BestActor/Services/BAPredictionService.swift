@@ -79,7 +79,7 @@ class BAPredictionService {
 	
 	func predictFacialExpression(_ image: UIImage,
 								 _ label: String,
-								 _ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
+								 _ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) {
 		
 		// Process the image
 		let width = UIScreen.main.bounds.size.width

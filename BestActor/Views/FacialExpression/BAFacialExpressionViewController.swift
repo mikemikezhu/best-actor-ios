@@ -167,44 +167,21 @@ extension BAFacialExpressionViewController {
 		if let predictionService = service as? BAPredictionService,
 			let facialExpression = self.facialExpression {
 
-			do {
-				try predictionService.predictFacialExpression(image, facialExpression, { (score, error) in
+			predictionService.predictFacialExpression(image, facialExpression, { (score, error) in
 
-					if let error = error {
+				if let score = score {
 
-						//						if case BAError.failToDetectFace = error {
-						//
-						//							// Show alert to take photo again
-						//							let alert = UIAlertController(title: "Face cannot be detected",
-						//														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
-						//														  preferredStyle: .alert)
-						//
-						//							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
-						//
-						//								// Hide loading container view
-						//								self.hideLoadingContainerView()
-						//
-						//								// Take photo again if fail to detect face
-						//								self.takePhoto()
-						//							})
-						//
-						//							alert.addAction(action)
-						//							self.present(alert, animated: true)
-						//						}
-					} else {
+					// Set score and image
+					self.image = image
+					self.score = score
 
-						// Set score and image
-						self.image = image
-						self.score = score
-
-						// Segue to score page
-						self.performSegue(withIdentifier: BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER,
-										  sender: self)
-					}
-				})
-			} catch {
-				BALogger.error("Fail to predict facial expression")
-			}
+					// Segue to score page
+					self.performSegue(withIdentifier: BAFacialExpressionViewControllerConstants.SEGUE_TO_SCORE_IDENTIFIER,
+									  sender: self)
+				} else {
+					BALogger.error("Fail to predict facial expression")
+				}
+			})
 		}
 	}
 }
