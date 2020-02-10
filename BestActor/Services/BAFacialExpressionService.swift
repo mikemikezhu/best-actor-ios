@@ -8,14 +8,12 @@
 
 import UIKit
 
-class BAFacialExpressionService: NSObject {
+class BAFacialExpressionService {
 
 	private var facialExpressions: [String]?
 	private(set) var selectedFacialExpression: String?
 
-	override init() {
-
-		super.init()
+	init() {
 		facialExpressions = loadFacialExpressions()
 	}
 
@@ -30,7 +28,7 @@ class BAFacialExpressionService: NSObject {
 	}
 
 	private func loadFacialExpressions() -> [String]? {
-
+		
 		// Load facial expressions from plist file
 		if let path = Bundle.main.path(forResource: "FacialExpression", ofType: "plist") {
 

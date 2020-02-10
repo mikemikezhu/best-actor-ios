@@ -20,8 +20,11 @@ class BAServiceManager {
 
 		let facialExpressionService = BAFacialExpressionService()
 		BACoreServiceFactory.sharedFactory.registerService(facialExpressionService)
-		
-		let predictionService = BAPredictionService()
+
+		let processImageService = BAProcessImageService()
+		BACoreServiceFactory.sharedFactory.registerService(processImageService)
+
+		let predictionService = BAPredictionService(processImageService)
 		BACoreServiceFactory.sharedFactory.registerService(predictionService)
 	}
 }

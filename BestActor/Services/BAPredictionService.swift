@@ -6,130 +6,187 @@
 //  Copyright © 2020 Mikemikezhu. All rights reserved.
 //
 
+import CoreImage
+import TensorFlowLite
 import UIKit
-import CoreML
-import Vision
 
 fileprivate struct BAPredictionServiceConstants {
 
-	static let IMAGE_DIRECTORY_PATH = "images"
-	static let IMAGE_COMPRESSION_QUALITY: CGFloat = 0.5
+	// Model: FER2013.tflite
+	static let MODEL_INFO_FILE_NAME = "FER2013"
+	static let MODEL_INFO_FILE_EXTENSION = "tflite"
+
+	// Labels: labels.txt
+	static let LABELS_INFO_FILE_NAME = "labels"
+	static let LABELS_INFO_FILE_EXTENSION = "txt"
+
+	static let ROI_SIDE_LENGTH = CGFloat(960.0)
+	static let RESIZED_SIDE_LENGTH = CGFloat(48.0)
 }
 
-class BAPredictionService: NSObject {
+fileprivate struct BAInference {
 
+	let confidence: Float
+	let label: String
+}
+
+class BAPredictionService {
+	
+	// MARK: - Private Properties
+	
+	private var labels: [String] = []
+	private var interpreter: Interpreter
+	private var processImageService: BAProcessImageService
+	
+	// MARK: - Initialize
+	
+	init(_ processImageService: BAProcessImageService) {
+		
+		// Construct the path to the model file
+		guard let modelPath = Bundle.main.path(forResource: BAPredictionServiceConstants.MODEL_INFO_FILE_NAME,
+											   ofType: BAPredictionServiceConstants.MODEL_INFO_FILE_EXTENSION) else {
+												fatalError("Failed to load the model file with name: \(BAPredictionServiceConstants.MODEL_INFO_FILE_NAME).")
+		}
+		
+		// Specify the options for the `Interpreter`
+		let options = Interpreter.Options()
+		do {
+			// Create the `Interpreter`.
+			interpreter = try Interpreter(modelPath: modelPath, options: options)
+			// Allocate memory for the model's input `Tensor`s.
+			try interpreter.allocateTensors()
+		} catch let error {
+			fatalError("Failed to create the interpreter with error: \(error.localizedDescription)")
+		}
+		
+		// Load the classes listed in the labels file
+		guard let fileURL = Bundle.main.url(forResource: BAPredictionServiceConstants.LABELS_INFO_FILE_NAME,
+											withExtension: BAPredictionServiceConstants.LABELS_INFO_FILE_EXTENSION) else {
+												fatalError("Labels file not found in bundle. Please add a labels file with name " +
+													"\(BAPredictionServiceConstants.LABELS_INFO_FILE_NAME) and try again.")
+		}
+		
+		do {
+			let contents = try String(contentsOf: fileURL, encoding: .utf8)
+			labels = contents.components(separatedBy: .newlines)
+		} catch {
+			fatalError("Labels file named \(BAPredictionServiceConstants.LABELS_INFO_FILE_NAME) cannot be read. Please add a " +
+				"valid labels file and try again.")
+		}
+		
+		// Set process image service
+		self.processImageService = processImageService
+	}
+	
+	// MARK: - Internal methods
+	
 	func predictFacialExpression(_ image: UIImage,
 								 _ label: String,
 								 _ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
-
-		// Detect face in the image
-		let normalizedImage = image.fixOrientation()
-		guard let faceImage = OpenCVWrapper.detectFace(normalizedImage) else {
-			BALogger.error("Fail to detect any face in the image")
-			completion(nil, BAError.failToDetectFace)
+		
+		// Process the image
+		guard let processedImage = processImageService.processImage(image, BAPredictionServiceConstants.ROI_SIDE_LENGTH, BAPredictionServiceConstants.RESIZED_SIDE_LENGTH) else {
+			BALogger.error("Fail to process image")
+			completion(nil, BAError.failToProcessImage)
 			return
 		}
 
-		#if DEBUG
-		// Save face image for debugging purpose
-		saveImageFile(faceImage)
-		#endif
-
-		// Make prediction
-		try makePrediction(image,
-						   label,
-						   completion)
-	}
-
-	private func saveImageFile(_ image: UIImage) {
-
-		// Save image file for debugging purpose
-		let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(BAPredictionServiceConstants.IMAGE_DIRECTORY_PATH)
-
-		if !FileManager.default.fileExists(atPath: path) {
-			try! FileManager.default.createDirectory(atPath: path,
-													 withIntermediateDirectories: true,
-													 attributes: nil)
-		}
-
-		guard let url = NSURL(string: path) else {
-			BALogger.warn("Fail to find path: \(path)")
+		// Convert pixel buffer
+		guard let pixelBuffer = processImageService.convertPixelBuffer(processedImage) else {
+			BALogger.error("Fail to get pixel buffer of image")
+			completion(nil, BAError.failToProcessImage)
 			return
 		}
 
-		let date = Date().toString()
-		let imageName = "\(date)_image.jpg"
-		guard let imagePath = url.appendingPathComponent(imageName) else {
-			BALogger.warn("Fail to create image: \(imageName)")
-			return
-		}
-
-		let urlString: String = imagePath.absoluteString
-		BALogger.info("Save to image path: \(urlString)")
-
-		let imageData = image.jpegData(compressionQuality: BAPredictionServiceConstants.IMAGE_COMPRESSION_QUALITY)
-		if !FileManager.default.createFile(atPath: urlString as String,
-										   contents: imageData,
-										   attributes: nil) {
-			BALogger.warn("Fail to save to image path: \(urlString)")
-		}
-	}
-
-	private func makePrediction(_ image: UIImage,
-								_ label: String,
-								_ completion: @escaping (_ result: Float?, _ error: Error?) -> Void) throws {
-
-		// Create CoreML request
-		let model = try VNCoreMLModel(for: BAFerModel().model)
-		let request = VNCoreMLRequest(model: model, completionHandler: { request, error in
-
-			DispatchQueue.main.async {
-				// Prediction result
-				guard let results = request.results else {
-					completion(nil, error)
-					return
-				}
-
-				BALogger.info("Prediction result: \(results)")
-
-				for result in results {
-					if let result = result as? VNClassificationObservation,
-						let modelLabel = BAModelLabelConverter.convertModelLabel(label) {
-
-						if modelLabel == result.identifier {
-							// Confidence of the prediction result
-							let confidence = result.confidence
-							BALogger.info("Confidence for label \(modelLabel): \(confidence)")
-							completion(confidence, nil)
-							return
-						}
-					}
-				}
-
-				completion(nil, BAError.failToPredict)
-			}
-		})
-
-		request.imageCropAndScaleOption = .scaleFill
-
+		// Run computer vision model and make predictions
 		DispatchQueue.global(qos: .userInitiated).async {
-			// Perform prediction
-			if let ciImage = CIImage(image: image) {
-				let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
-				do {
-					try handler.perform([request])
-				} catch {
+			
+			guard let inferences = self.runModel(onFrame: pixelBuffer) else {
+				
+				DispatchQueue.main.async {
+					BALogger.error("Fail to make predictions")
 					completion(nil, BAError.failToPredict)
+				}
+				return
+			}
+			
+			DispatchQueue.main.async {
+
+				BALogger.info("Predictions: \(inferences)")
+				for inference in inferences {
+					if inference.label == label {
+						let confidence = inference.confidence
+						BALogger.info("Facial expression \(label): \(confidence)")
+						completion(confidence, nil)
+						return
+					}
 				}
 			}
 		}
 	}
 }
+
+// MARK: - Private methods
+
+extension BAPredictionService {
+
+	private func runModel(onFrame pixelBuffer: CVPixelBuffer) -> [BAInference]? {
+
+		// Run computer vision model and make predictions
+		let outputTensor: Tensor
+		do {
+			// Get the image data from pixel buffer
+			guard let imageData = processImageService.convertImageData(pixelBuffer) else {
+				print("Failed to convert the image buffer to RGB data.")
+				return nil
+			}
+
+			// Copy the image data to the input `Tensor`.
+			try interpreter.copy(imageData, toInputAt: 0)
+
+			// Run inference by invoking the `Interpreter`.
+			try interpreter.invoke()
+
+			// Get the output `Tensor` to process the inference results.
+			outputTensor = try interpreter.output(at: 0)
+
+		} catch let error {
+			BALogger.error("Failed to invoke the interpreter with error: \(error.localizedDescription)")
+			return nil
+		}
+
+		let results: [Float]
+		switch outputTensor.dataType {
+		case .uInt8:
+			guard let quantization = outputTensor.quantizationParameters else {
+				BALogger.error("No results returned because the quantization values for the output tensor are nil.")
+				return nil
+			}
+			let quantizedResults = [UInt8](outputTensor.data)
+			results = quantizedResults.map {
+				quantization.scale * Float(Int($0) - quantization.zeroPoint)
+			}
+		case .float32:
+			let data = outputTensor.data
+			results = data.withUnsafeBytes { .init($0.bindMemory(to: Float.self)) }
+		default:
+			BALogger.error("Output tensor data type \(outputTensor.dataType) is unsupported for this example app.")
+			return nil
+		}
+
+		// Return the inference time and inference results.
+		let zippedResults = zip(results, labels.indices)
+		let inferences = zippedResults.map { result in BAInference(confidence: result.0, label: labels[result.1]) }
+
+		return inferences
+	}
+}
+
 
 // MARK: - BAService
 
 extension BAPredictionService: BAService {
-
+	
 	var identifier: String {
 		return String(describing: BAPredictionService.self)
 	}

@@ -17,11 +17,12 @@
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
 		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
 		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
+		2714C19723F1128F002A98DE /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2714C19623F1128F002A98DE /* labels.txt */; };
+		2714C19A23F11DFE002A98DE /* FER2013.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2714C18F23F05783002A98DE /* FER2013.tflite */; };
 		2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */; };
-		2717D82523E2FBA800909884 /* BAModelLabelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */; };
-		2717D82923E3DF3B00909884 /* BAFerModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */; };
 		27295E8423D593B20029B818 /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8323D593B20029B818 /* BAError.swift */; };
 		27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */; };
+		2778FD8723F149DA00097A0B /* BAProcessImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778FD8623F149DA00097A0B /* BAProcessImageService.swift */; };
 		2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */; };
 		2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */; };
 		2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */; };
@@ -44,7 +45,6 @@
 		27FBC1E923D315D400956E5E /* BAFacialExpressionLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1E823D315D400956E5E /* BAFacialExpressionLoadingViewController.swift */; };
 		27FBC1EB23D33C1100956E5E /* BAPredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */; };
 		27FBC1ED23D3418500956E5E /* Date+CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */; };
-		27FBC1EF23D3605900956E5E /* UIImage+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */; };
 		FBF552AAB388EF094E4E8325 /* Pods_BestActor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F70320DB8FF72801FCBA9 /* Pods_BestActor.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +63,12 @@
 		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		2714C18F23F05783002A98DE /* FER2013.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = FER2013.tflite; sourceTree = "<group>"; };
+		2714C19623F1128F002A98DE /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
-		2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAModelLabelConverter.swift; sourceTree = "<group>"; };
-		2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BAFerModel.mlmodel; sourceTree = "<group>"; };
 		27295E8323D593B20029B818 /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
 		27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionScoreViewController.swift; sourceTree = "<group>"; };
+		2778FD8623F149DA00097A0B /* BAProcessImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAProcessImageService.swift; sourceTree = "<group>"; };
 		2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2786805023CCD5E500DBDEB8 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		2786805323CD921D00DBDEB8 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		27FBC1E823D315D400956E5E /* BAFacialExpressionLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionLoadingViewController.swift; sourceTree = "<group>"; };
 		27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAPredictionService.swift; sourceTree = "<group>"; };
 		27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomDate.swift"; sourceTree = "<group>"; };
-		27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Orientation.swift"; sourceTree = "<group>"; };
 		A10649EA7319861EA5A6B833 /* Pods-BestActor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestActor.debug.xcconfig"; path = "Target Support Files/Pods-BestActor/Pods-BestActor.debug.xcconfig"; sourceTree = "<group>"; };
 		BDE713F363A1F66FF6177710 /* Pods-BestActor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestActor.release.xcconfig"; path = "Target Support Files/Pods-BestActor/Pods-BestActor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +117,7 @@
 				2704B2F723D0C8CD002340CB /* BACoreServiceFactory.swift */,
 				2704B2FB23D16B6B002340CB /* BAFacialExpressionService.swift */,
 				27FBC1EA23D33C1100956E5E /* BAPredictionService.swift */,
+				2778FD8623F149DA00097A0B /* BAProcessImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -153,7 +154,8 @@
 		2717D81B23E1A50B00909884 /* ML */ = {
 			isa = PBXGroup;
 			children = (
-				2717D82823E3DF3B00909884 /* BAFerModel.mlmodel */,
+				2714C19623F1128F002A98DE /* labels.txt */,
+				2714C18F23F05783002A98DE /* FER2013.tflite */,
 			);
 			path = ML;
 			sourceTree = "<group>";
@@ -163,10 +165,8 @@
 			children = (
 				2786804C23CCCCA100DBDEB8 /* UIColor+CustomColor.swift */,
 				27A17F4E23CD945A002D0EA3 /* UIFont+CustomFont.swift */,
-				27FBC1EE23D3605900956E5E /* UIImage+Orientation.swift */,
 				2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */,
 				27FBC1EC23D3418500956E5E /* Date+CustomDate.swift */,
-				2717D82423E2FBA800909884 /* BAModelLabelConverter.swift */,
 				2704B30423D18CB8002340CB /* BALogger.swift */,
 				27295E8323D593B20029B818 /* BAError.swift */,
 			);
@@ -342,6 +342,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2704B2FE23D16CE1002340CB /* FacialExpression.plist in Resources */,
+				2714C19A23F11DFE002A98DE /* FER2013.tflite in Resources */,
+				2714C19723F1128F002A98DE /* labels.txt in Resources */,
 				27B1B61523CCC39B00D9E314 /* LaunchScreen.storyboard in Resources */,
 				2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */,
 				27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */,
@@ -395,14 +397,13 @@
 				27A17F5323CD99E7002D0EA3 /* BATitleLabel.swift in Sources */,
 				27B1B61023CCC39500D9E314 /* BestActor.xcdatamodeld in Sources */,
 				27B1B60623CCC39500D9E314 /* AppDelegate.swift in Sources */,
+				2778FD8723F149DA00097A0B /* BAProcessImageService.swift in Sources */,
 				2786804D23CCCCA100DBDEB8 /* UIColor+CustomColor.swift in Sources */,
 				27B1B60823CCC39500D9E314 /* SceneDelegate.swift in Sources */,
-				27FBC1EF23D3605900956E5E /* UIImage+Orientation.swift in Sources */,
 				278997C623D0AB0B00A5E62B /* BATutorialPageViewController.swift in Sources */,
 				27FBC1E923D315D400956E5E /* BAFacialExpressionLoadingViewController.swift in Sources */,
 				27A17F5C23CDB5BF002D0EA3 /* BATextLabel.swift in Sources */,
 				2704B30323D18287002340CB /* BAFacialExpressionViewController.swift in Sources */,
-				2717D82523E2FBA800909884 /* BAModelLabelConverter.swift in Sources */,
 				27FBC1EB23D33C1100956E5E /* BAPredictionService.swift in Sources */,
 				27A17F5523CD9C5D002D0EA3 /* BAButton.swift in Sources */,
 				2786805123CCD5E500DBDEB8 /* BABaseViewController.swift in Sources */,
@@ -411,7 +412,6 @@
 				27A17F5723CDA28B002D0EA3 /* BASubtitleLabel.swift in Sources */,
 				2704B2FA23D166FB002340CB /* BAService.swift in Sources */,
 				27295E8623D5A6580029B818 /* BAFacialExpressionScoreViewController.swift in Sources */,
-				2717D82923E3DF3B00909884 /* BAFerModel.mlmodel in Sources */,
 				2704B2F823D0C8CD002340CB /* BACoreServiceFactory.swift in Sources */,
 				27295E8423D593B20029B818 /* BAError.swift in Sources */,
 			);

@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>surprise</string>
-	<string>sad</string>
+	<string>angry</string>
+	<string>disgust</string>
+	<string>fear</string>
 	<string>happy</string>
+	<string>sad</string>
+	<string>surprise</string>
+	<string>neutral</string>
 </array>
 </plist>

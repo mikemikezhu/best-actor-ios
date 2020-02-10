@@ -9,7 +9,7 @@
 import Foundation
 
 enum BAError: Error {
-	case failToDetectFace
+	case failToProcessImage
 	case failToPredict
 }
 
@@ -17,8 +17,8 @@ extension BAError: LocalizedError {
 
 	var errorDescription: String? {
 		switch self {
-		case .failToDetectFace:
-			return NSLocalizedString("Fail to detect face", comment: "")
+		case .failToProcessImage:
+			return NSLocalizedString("Fail to process face image", comment: "")
 		case .failToPredict:
 			return NSLocalizedString("Fail to predict model", comment: "")
 		}

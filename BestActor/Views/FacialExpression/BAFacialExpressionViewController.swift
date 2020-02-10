@@ -160,25 +160,25 @@ extension BAFacialExpressionViewController {
 
 					if let error = error {
 
-						if case BAError.failToDetectFace = error {
-
-							// Show alert to take photo again
-							let alert = UIAlertController(title: "Face cannot be detected",
-														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
-														  preferredStyle: .alert)
-
-							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
-
-								// Hide loading container view
-								self.hideLoadingContainerView()
-
-								// Take photo again if fail to detect face
-								self.takePhoto()
-							})
-
-							alert.addAction(action)
-							self.present(alert, animated: true)
-						}
+//						if case BAError.failToDetectFace = error {
+//
+//							// Show alert to take photo again
+//							let alert = UIAlertController(title: "Face cannot be detected",
+//														  message: "Please kindly take the photo again. Make sure your face appears in the center of the camera.",
+//														  preferredStyle: .alert)
+//
+//							let action = UIAlertAction(title: "Take photo again", style: .default, handler: {action in
+//
+//								// Hide loading container view
+//								self.hideLoadingContainerView()
+//
+//								// Take photo again if fail to detect face
+//								self.takePhoto()
+//							})
+//
+//							alert.addAction(action)
+//							self.present(alert, animated: true)
+//						}
 					} else {
 
 						// Set score and image
