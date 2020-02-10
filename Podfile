@@ -6,7 +6,6 @@ target 'BestActor' do
   inhibit_all_warnings!
 
   # Pods for BestActor
-  pod 'OpenCV2'
   pod 'TensorFlowLiteSwift'
 
 end
