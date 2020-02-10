@@ -11,7 +11,7 @@
         <!--Tutorial Page View Controller-->
         <scene sceneID="dw5-kN-WJx">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qJ6-3p-2W0" customClass="BATutorialPageViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qJ6-3p-2W0" customClass="BATutorialPageViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqz-aG-vVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3099" y="110"/>
@@ -19,7 +19,7 @@
         <!--Tutorial Container View Controller-->
         <scene sceneID="h2R-ey-CMK">
             <objects>
-                <viewController id="Kw8-n3-oce" customClass="BATutorialContainerViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kw8-n3-oce" customClass="BATutorialContainerViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R8R-bZ-26K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
         <!--Base View Controller-->
         <scene sceneID="6oS-fq-ckt">
             <objects>
-                <viewController storyboardIdentifier="first_tutorial" id="knZ-cx-1uJ" customClass="BABaseViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first_tutorial" id="knZ-cx-1uJ" customClass="BABaseViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sq8-9B-R7V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="273" id="lq0-dA-MWX"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When pressing “START PLAYING” button, a text description of facial expression will be displayed on the screen." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-EK-19h" customClass="BATextLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When pressing “START PLAYING” button, a text description of facial expression will be displayed on the screen." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-EK-19h" customClass="BATextLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="79" width="374" height="250"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -94,7 +94,7 @@
         <!--Base View Controller-->
         <scene sceneID="KHb-J5-rrT">
             <objects>
-                <viewController storyboardIdentifier="second_tutorial" id="rkr-y9-jAH" customClass="BABaseViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second_tutorial" id="rkr-y9-jAH" customClass="BABaseViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZr-61-IVL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
                                     <constraint firstAttribute="width" constant="273" id="bco-FE-7rp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRH-A4-gV1" customClass="BATextLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRH-A4-gV1" customClass="BATextLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="79" width="374" height="250"/>
                                 <string key="text">The players must mimic the facial expression in front of the camera. The better the players mimic the facial expression, the higher score will be achieved. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -133,7 +133,7 @@
         <!--Base View Controller-->
         <scene sceneID="zqh-rk-uzo">
             <objects>
-                <viewController storyboardIdentifier="third_tutorial" id="LE6-qU-Yob" customClass="BABaseViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="third_tutorial" id="LE6-qU-Yob" customClass="BABaseViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zRY-k3-bVr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,11 +145,11 @@
                                     <constraint firstAttribute="height" constant="321" id="k1t-sk-uEj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfd-HN-IpW" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfd-HN-IpW" customClass="BAButton" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="141" y="638.5" width="132" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="I06-x0-VjM"/>
-                                    <constraint firstAttribute="width" constant="132" id="XDk-Rh-YsL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="XDk-Rh-YsL"/>
                                 </constraints>
                                 <state key="normal" title="START PLAYING"/>
                                 <connections>
@@ -174,18 +174,18 @@
         <!--Facial Expression View Controller-->
         <scene sceneID="aKd-uw-6R9">
             <objects>
-                <viewController id="dKy-lH-NAu" customClass="BAFacialExpressionViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dKy-lH-NAu" customClass="BAFacialExpressionViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bbI-HV-HgW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S MIMIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78t-ne-Afx" customClass="BASubtitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S MIMIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78t-ne-Afx" customClass="BASubtitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-TM-5cG" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-TM-5cG" customClass="BATitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="145" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -198,7 +198,7 @@
                                     <constraint firstAttribute="width" constant="255" id="o4s-kI-YsS"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0N-uC-56i" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0N-uC-56i" customClass="BAButton" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="163" y="708.5" width="88" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="Tdp-7Q-Bh9"/>
@@ -249,31 +249,31 @@
         <!--Facial Expression Score View Controller-->
         <scene sceneID="WS6-lr-2JN">
             <objects>
-                <viewController id="Qbq-FJ-Yqf" customClass="BAFacialExpressionScoreViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qbq-FJ-Yqf" customClass="BAFacialExpressionScoreViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uHw-g2-QdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-av-uJF" customClass="BASubtitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-av-uJF" customClass="BASubtitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afK-85-2SU" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afK-85-2SU" customClass="BATitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="145" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fmv-Yd-lCp" customClass="BAPhotoFrameImageView" customModule="BestActor" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fmv-Yd-lCp" customClass="BAPhotoFrameImageView" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="79.5" y="337.5" width="255" height="321"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="321" id="e52-Ba-9Wh"/>
                                     <constraint firstAttribute="width" constant="255" id="gCu-pf-o8a"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP2-em-9fH" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP2-em-9fH" customClass="BAButton" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="50" y="708.5" width="118" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="Jwx-pr-Rw3"/>
@@ -284,7 +284,7 @@
                                     <action selector="sharePhoto:" destination="Qbq-FJ-Yqf" eventType="touchUpInside" id="m2L-oo-j1Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-6m-rkQ" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-6m-rkQ" customClass="BAButton" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="246" y="708.5" width="118" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="7Kc-8f-o9M"/>
@@ -326,7 +326,7 @@
         <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BABaseViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BABaseViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,19 +337,19 @@
                                     <constraint firstAttribute="width" secondItem="jcl-hk-FrZ" secondAttribute="height" multiplier="83:72" id="MMn-HW-Auz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-ME-3bw" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-ME-3bw" customClass="BATitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="132" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-d0-dCq" customClass="BATitleLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-d0-dCq" customClass="BATitleLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="172.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-p0-5Dh" customClass="BAButton" customModule="BestActor" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-p0-5Dh" customClass="BAButton" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="141" y="451" width="132" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="49F-bd-zfK"/>
@@ -386,7 +386,7 @@
         <!--Facial Expression Loading View Controller-->
         <scene sceneID="1io-pZ-Srn">
             <objects>
-                <viewController id="LnZ-vj-cxH" customClass="BAFacialExpressionLoadingViewController" customModule="BestActor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LnZ-vj-cxH" customClass="BAFacialExpressionLoadingViewController" customModule="Best_Actor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqI-84-Rxe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,7 +399,7 @@
                                 </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREDICTING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsY-WD-6KE" customClass="BATextLabel" customModule="BestActor" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREDICTING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsY-WD-6KE" customClass="BATextLabel" customModule="Best_Actor" customModuleProvider="target">
                                 <rect key="frame" x="151" y="446" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -428,6 +428,6 @@
         <image name="tutorial_2" width="273" height="507"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m5C-FT-LFn"/>
+        <segue reference="E5e-Hz-EsO"/>
     </inferredMetricsTieBreakers>
 </document>
