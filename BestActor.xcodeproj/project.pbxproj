@@ -15,8 +15,6 @@
 		2704B30023D17811002340CB /* BAServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B2FF23D17811002340CB /* BAServiceManager.swift */; };
 		2704B30323D18287002340CB /* BAFacialExpressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30223D18287002340CB /* BAFacialExpressionViewController.swift */; };
 		2704B30523D18CB8002340CB /* BALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704B30423D18CB8002340CB /* BALogger.swift */; };
-		2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */; };
-		2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */; };
 		2714C19723F1128F002A98DE /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2714C19623F1128F002A98DE /* labels.txt */; };
 		2714C19A23F11DFE002A98DE /* FER2013.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2714C18F23F05783002A98DE /* FER2013.tflite */; };
 		2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */; };
@@ -60,11 +58,6 @@
 		2704B2FF23D17811002340CB /* BAServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAServiceManager.swift; sourceTree = "<group>"; };
 		2704B30223D18287002340CB /* BAFacialExpressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAFacialExpressionViewController.swift; sourceTree = "<group>"; };
 		2704B30423D18CB8002340CB /* BALogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BALogger.swift; sourceTree = "<group>"; };
-		2704B31823D1CD40002340CB /* BestActor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BestActor-Bridging-Header.h"; sourceTree = "<group>"; };
-		2704B31923D1CD40002340CB /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
-		2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
-		2704B31D23D1CE52002340CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 		2714C18F23F05783002A98DE /* FER2013.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = FER2013.tflite; sourceTree = "<group>"; };
 		2714C19623F1128F002A98DE /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		2717D82223E2CF7D00909884 /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
@@ -134,25 +127,6 @@
 				27295E8523D5A6580029B818 /* BAFacialExpressionScoreViewController.swift */,
 			);
 			path = FacialExpression;
-			sourceTree = "<group>";
-		};
-		2704B31C23D1CE23002340CB /* OpenCV */ = {
-			isa = PBXGroup;
-			children = (
-				2704B31923D1CD40002340CB /* OpenCVWrapper.h */,
-				2704B31A23D1CD40002340CB /* OpenCVWrapper.mm */,
-				2704B31823D1CD40002340CB /* BestActor-Bridging-Header.h */,
-				2704B31D23D1CE52002340CB /* PrefixHeader.pch */,
-			);
-			path = OpenCV;
-			sourceTree = "<group>";
-		};
-		2704B31E23D1DC60002340CB /* HaarCascade */ = {
-			isa = PBXGroup;
-			children = (
-				2704B32123D3003D002340CB /* haarcascade_frontalface_default.xml */,
-			);
-			path = HaarCascade;
 			sourceTree = "<group>";
 		};
 		2717D81B23E1A50B00909884 /* ML */ = {
@@ -257,10 +231,8 @@
 				2786804F23CCD5B700DBDEB8 /* Views */,
 				2704B2F623D0C88D002340CB /* Services */,
 				2786804E23CCCFDD00DBDEB8 /* Delegates */,
-				2704B31C23D1CE23002340CB /* OpenCV */,
 				2786804B23CCCB4D00DBDEB8 /* Utils */,
 				2786805223CD920A00DBDEB8 /* Fonts */,
-				2704B31E23D1DC60002340CB /* HaarCascade */,
 				2717D81B23E1A50B00909884 /* ML */,
 				27B1B61123CCC39B00D9E314 /* Assets.xcassets */,
 				27B1B61623CCC39B00D9E314 /* Info.plist */,
@@ -351,7 +323,6 @@
 				2714C19A23F11DFE002A98DE /* FER2013.tflite in Resources */,
 				2714C19723F1128F002A98DE /* labels.txt in Resources */,
 				27B1B61523CCC39B00D9E314 /* LaunchScreen.storyboard in Resources */,
-				2704B32223D3003D002340CB /* haarcascade_frontalface_default.xml in Resources */,
 				27B1B61223CCC39B00D9E314 /* Assets.xcassets in Resources */,
 				2786805623CD921E00DBDEB8 /* OpenSans-CondBold.ttf in Resources */,
 				2786805823CD921E00DBDEB8 /* HoboStd.otf in Resources */,
@@ -396,7 +367,6 @@
 				27A17F5923CDA420002D0EA3 /* BAPhotoFrameImageView.swift in Sources */,
 				2717D82323E2CF7D00909884 /* UIDevice+Simulator.swift in Sources */,
 				27FBC1ED23D3418500956E5E /* Date+CustomDate.swift in Sources */,
-				2704B31B23D1CD40002340CB /* OpenCVWrapper.mm in Sources */,
 				278997C923D0B4E800A5E62B /* BATutorialContainerViewController.swift in Sources */,
 				27A17F4F23CD945A002D0EA3 /* UIFont+CustomFont.swift in Sources */,
 				2704B30523D18CB8002340CB /* BALogger.swift in Sources */,
@@ -580,8 +550,10 @@
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
 				PRODUCT_NAME = "Best Actor";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -605,7 +577,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemikezhu.BestActor;
 				PRODUCT_NAME = "Best Actor";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BestActor/OpenCV/BestActor-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

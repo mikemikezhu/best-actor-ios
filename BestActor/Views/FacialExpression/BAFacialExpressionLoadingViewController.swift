@@ -10,9 +10,14 @@ import UIKit
 
 class BAFacialExpressionLoadingViewController: UIViewController {
 
+	@IBOutlet weak var indicatorView: UIActivityIndicatorView!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		if #available(iOS 13.0, *) {
+			indicatorView.style = .large
+		}
 		view.backgroundColor = UIColor.customLoadingViewBackgroundColor
 	}
 }

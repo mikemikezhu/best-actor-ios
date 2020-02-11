@@ -32,7 +32,8 @@ class BAFacialExpressionScoreViewController: BABaseViewController {
 extension BAFacialExpressionScoreViewController {
 
 	@IBAction func sharePhoto(_ sender: BAButton) {
-
+		// Share photo to social media
+		sharePhoto()
 	}
 }
 

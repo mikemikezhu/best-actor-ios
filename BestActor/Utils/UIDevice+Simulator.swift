@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mikemikezhu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIDevice {
 
