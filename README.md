@@ -44,7 +44,7 @@ The class diagram of the mobile game is demonstrated as below.
 This mobile game uses TensorFlow Lite to make predictions with computer vision model. Therefore, execute the following command to install the frameworks through CocoaPods.
 
 ```
-pod instal
+pod install
 ```
 
 - Run the mobile game through Xcode
