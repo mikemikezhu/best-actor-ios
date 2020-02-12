@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>BestActor would like to use your camera to take photo.</string>
+	<string>BestActor would like to use your camera to take face photo. However, the face photo will only be stored locally in your device, and will not be collected nor shared with any third party services.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>HoboStd.otf</string>
